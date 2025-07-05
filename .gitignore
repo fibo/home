@@ -3,9 +3,7 @@
 # ... except the following files and folders
 !.ackrc
 !.bash/git-aware-prompt
-!.bash_login
-!.bash_logout
-!.bashrc
+!.bash/config.sh
 !.editorconfig
 !.fibo/bin/README.md
 !.fibo/bin/ack
@@ -14,10 +12,11 @@
 !.gitignore
 !.inputrc
 !.screenrc
-!.shell/aliases
+!.shell/aliases.sh
 !.shell/cleanup_git_branches
 !.shell/dir
 !.shell/gh-clone
 !.shell/profile
 !.ssh/agent
-!.vimrc
+!.zsh/config.sh
+!.zsh/env.sh

@@ -1,9 +1,10 @@
-source ~/.shell/profile
+#
+# Add this to your ~/.bashrc file:
+#
+#			source ~/.bash/config.sh
+###
 
-# Play well with others, source global definitions.
-if [ -f /etc/bashrc ]; then
-	source /etc/bashrc
-fi
+source ~/.shell/profile
 
 # Set locale
 export LC_ALL=en_US.UTF-8
