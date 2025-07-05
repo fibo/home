@@ -26,6 +26,22 @@ PROMPT='${vcs_info_msg_0_}%2~/ '
 # enable bash like comments in shell
 setopt interactivecomments
 
+# Auto-completion
+###
+
+fpath=(~/.zsh $fpath)
+autoload -Uz compinit
+compinit -i
+
+# npm completion
+source ~/.zsh/completion/npm-completion
+
+# git completion
+zstyle ':completion:*:*:git:*' script ~/.zsh/completion/git-completion.bash
+
+# Small letters will match small and capital letters
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+
 # Misc
 ###
 

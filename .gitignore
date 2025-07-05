@@ -8,7 +8,6 @@
 !.fibo/bin/README.md
 !.fibo/bin/ack
 !.fibo/bin/clock
-!.fibo/bin/zshrc
 !.gitignore
 !.inputrc
 !.screenrc
@@ -21,3 +20,5 @@
 !.zsh/config.sh
 !.zsh/env.sh
 !.zsh/CTRL-L.sh
+!.zsh/completion/git-completion.bash
+!.zsh/completion/npm-completion
