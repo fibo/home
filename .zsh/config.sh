@@ -26,3 +26,7 @@ PROMPT='${vcs_info_msg_0_}%2~/ '
 # enable bash like comments in shell
 setopt interactivecomments
 
+# Misc
+###
+
+source ~/.zsh/CTRL-L.sh

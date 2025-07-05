@@ -20,3 +20,4 @@
 !.ssh/agent
 !.zsh/config.sh
 !.zsh/env.sh
+!.zsh/CTRL-L.sh
