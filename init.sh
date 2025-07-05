@@ -15,10 +15,10 @@ backup_if_any .gitmodules
 curl -L https://raw.githubusercontent.com/fibo/home/home/.gitmodules \
     | grep path | cut -d = -f2 \
         | while read x; do backup_if_any $x; done
-git init
-git checkout -b home
+git init -b main
 git remote add my https://github.com/fibo/home.git
-git pull my home
+git fetch
+git switch
 git submodule update --init
 git submodule foreach git config core.fileMode false
 cd -

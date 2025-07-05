@@ -45,10 +45,10 @@ Backup *.gitmodules*, and modules listed in it
 
 Here we go, create repo
 
-    git init
-    git checkout -b home
+    git init -b main
     git remote add my https://github.com/fibo/home.git
-    git pull my home
+    git fetch
+    git switch
 
 Init submodules, ignore file mode changes
 
