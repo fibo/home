@@ -4,8 +4,8 @@
 
 To install or update, launch
 
-```bash
-curl -L https://fibo.github.io/home/init.sh | bash
+```shell
+curl -L https://fibo.github.io/home/init.sh | sh
 ```
 
 Contents are in the [home branch](https://github.com/fibo/home/tree/home).
