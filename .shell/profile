@@ -1,15 +1,10 @@
 export PATH=~/.fibo/bin:$PATH
 
-source ~/.shell/aliases
+source ~/.shell/aliases.sh
 
-# Modify previous commit
-#
-#     git amend
-#
-git config --global alias.amend "commit -a --amend"
+# Source utils.
 
-# List files with merge conflicts
-#
-#     git conflicts
-#
-git config --global alias.conflicts "diff --name-only --diff-filter=U"
+source ~/.shell/cleanup_git_branches/fun.sh
+source ~/.shell/dir/fun.sh
+source ~/.shell/gh-clone/fun.sh
+

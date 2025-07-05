@@ -24,12 +24,6 @@ if [ -f ~/.ssh/agent ]; then
 	. ~/.ssh/agent
 fi
 
-# Source utils.
-
-source ~/.shell/cleanup_git_branches/fun.sh
-source ~/.shell/dir/fun.sh
-source ~/.shell/gh-clone/fun.sh
-
 # Load local bash profile, if any.
 if [ -f ~/.local/bashrc ]; then
 	source ~/.local/bashrc
