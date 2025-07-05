@@ -1,13 +1,8 @@
-#!/bin/bash
-#
-# For more information see https://github.com/fibo/home/blob/gh-pages/README.md
-
 cd
-[ -d .git ] && rm -rf .git
+rm -rf .git
 BACKUP_DAY=$(date +%F)
 BACKUP_DIR=$HOME/.home_backup.$BACKUP_DAY
 mkdir -p $BACKUP_DIR
-
 function backup_if_any () {
     TARGET=$(echo $1 | tr / _)
     [ -e $1 ] && mv -v $1 $BACKUP_DIR/$TARGET.$BACKUP_DAY;

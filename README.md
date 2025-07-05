@@ -2,19 +2,15 @@
 
 [![KLP](https://fibo.github.io/svg/klp-badge.svg)](https://fibo.github.io/kiss-literate-programming)
 
-This is the script used to [initialize fibo's home](https://github.com/fibo/home/blob/main/README.md#installation).
+This is the script used to [initialize fibo's home](https://github.com/fibo/home/).
 
-    #!/bin/bash
-    #
-    # For more information see https://github.com/fibo/home/blob/gh-pages/README.md
-    
 Start from `$HOME` dir
 
     cd
 
 First of all, remove *.git* folder, if any
 
-    [ -d .git ] && rm -rf .git
+    rm -rf .git
 
 ## Backup files and folders.
 
@@ -23,7 +19,7 @@ Create backup folder
     BACKUP_DAY=$(date +%F)
     BACKUP_DIR=$HOME/.home_backup.$BACKUP_DAY
     mkdir -p $BACKUP_DIR
-    
+
 Define a backup util function
 
     function backup_if_any () {
