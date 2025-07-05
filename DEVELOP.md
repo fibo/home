@@ -17,9 +17,9 @@ To add a file you need to modify *.gitignore* first. For example
 ```sh
 cd path/to/repo/fibo/home
 git switch home
-echo '!.bashrc' >> .gitignore
-git add .bashrc
-git commit -m 'added .bashrc'
+echo '!.zsh/config.sh' >> .gitignore
+git add -f .zsh/config.sh
+git commit
 git push origin home
 ```
 

@@ -1,27 +1,15 @@
 # home
 
-> All my *nix home versioned, not only dotfiles
+> 🏠 My *nix home versioned, not only dotfiles
 
-## Table of Contents
-
-  * [Installation](#installation)
-  * [Update](#update)
-  * [Branches](#branches)
-  * [How to](#how-to)
-    - [Add files and folders](#add-files-and-folders)
-    - [Add submodule](#add-submodule)
-  * [License](#license)
-
-## Installation
-
-All you need is a one-liner, it takes few seconds
+To install or update, launch
 
 ```bash
 curl -L https://fibo.github.io/home/init.sh | bash
 ```
 
-To update to latest version run the command above again.
+Contents are in the [home branch](https://github.com/fibo/home/tree/home).
+See also [DEVELOP.md](./DEVELOP.md) for development instructions.
 
-## License
+License is [MIT](https://fibo.github.io/mit-license/).
 
-[MIT](https://fibo.github.io/mit-license/)
