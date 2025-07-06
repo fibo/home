@@ -5,13 +5,11 @@ This is the source code of the _init.sh_ script used to [initialize fibo's home]
 
 ## Clean home
 
-Start from `$HOME` dir
+First of all, go to `$HOME` directory
+and remove *.git* folder and other git files, if any
 
     cd
-
-First of all, remove *.git* folder, if any
-
-    rm -rf .git
+    rm -rf .git .gitignore .gitmodules
 
 ## Backup
 
@@ -31,7 +29,7 @@ for example `~/.foo/bar` will become `_foo_bar`.
         [ -e $1 ] && mv -v $1 $BACKUP_DIR/$TARGET;
     }
 
-Backup *.gitignore*, and any file it excludes (i.e. predixed with a `!`)
+Backup files and folders, use _.gitignore_ to get the list
 
     backup_if_any .gitignore
     curl -L https://raw.githubusercontent.com/fibo/home/home/.gitignore \
@@ -61,12 +59,15 @@ Init submodules, ignore file mode changes
 
 ## Finally
 
-Back to previous folder.
+Cleanup, in particular remove git files.
 
-    cd -
-
-    echo home sweet home
+    rm -rf .git .gitignore .gitmodules
 
     unset BACKUP_DAY
     unset BACKUP_DIR
+
+Back to previous folder.
+
+    cd -
+    echo home sweet home
 

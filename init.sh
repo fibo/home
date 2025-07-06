@@ -1,5 +1,5 @@
 cd
-rm -rf .git
+rm -rf .git .gitignore .gitmodules
 BACKUP_DAY=$(date +%F)
 BACKUP_DIR=$HOME/.home_backup/$BACKUP_DAY
 mkdir -p $BACKUP_DIR
@@ -21,7 +21,8 @@ git fetch
 git switch home
 git submodule update --init
 git submodule foreach git config core.fileMode false
-cd -
-echo home sweet home
+rm -rf .git .gitignore .gitmodules
 unset BACKUP_DAY
 unset BACKUP_DIR
+cd -
+echo home sweet home
