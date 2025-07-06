@@ -4,11 +4,7 @@
 #			source ~/.bash/config.sh
 ###
 
-source ~/.shell/profile
-
-# Set locale
-export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
+source ~/.shell/profile.sh
 
 # Prompt displays git branch.
 

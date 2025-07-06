@@ -2,23 +2,28 @@
 *
 # ... except the following files and folders
 !.ackrc
-!.bash/git-aware-prompt
-!.bash/config.sh
 !.editorconfig
-!.fibo/bin/README.md
-!.fibo/bin/ack
-!.fibo/bin/clock
 !.gitignore
 !.inputrc
 !.screenrc
+# bin
+!.fibo/bin/README.md
+!.fibo/bin/ack
+!.fibo/bin/clock
+# ssh
+!.ssh/agent
+# bash
+!.bash/git-aware-prompt
+!.bash/config.sh
+# shell
 !.shell/aliases.sh
+!.shell/profile.sh
+!.shell/env.sh
 !.shell/cleanup_git_branches
 !.shell/dir
 !.shell/gh-clone
-!.shell/profile
-!.ssh/agent
+# zsh
 !.zsh/config.sh
-!.zsh/env.sh
 !.zsh/CTRL-L.sh
 !.zsh/completion/git-completion.bash
 !.zsh/completion/npm-completion

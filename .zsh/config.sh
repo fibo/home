@@ -4,8 +4,7 @@
 #			source ~/.zsh/config.sh
 ###
 
-source ~/.shell/profile
-source ~/.zsh/env.sh
+source ~/.shell/profile.sh
 
 # History
 ###
