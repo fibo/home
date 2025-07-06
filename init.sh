@@ -18,7 +18,7 @@ curl -L https://raw.githubusercontent.com/fibo/home/home/.gitmodules \
 git init -b main
 git remote add my https://github.com/fibo/home.git
 git fetch
-git switch
+git switch home
 git submodule update --init
 git submodule foreach git config core.fileMode false
 cd -
