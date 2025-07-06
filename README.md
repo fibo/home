@@ -1,8 +1,9 @@
-# init home
+
+This is the source code of the _init.sh_ script used to [initialize fibo's home](https://github.com/fibo/home/).
 
 [![KLP](https://fibo.github.io/svg/klp-badge.svg)](https://fibo.github.io/kiss-literate-programming)
 
-This is the script used to [initialize fibo's home](https://github.com/fibo/home/).
+## Clean home
 
 Start from `$HOME` dir
 
@@ -12,19 +13,22 @@ First of all, remove *.git* folder, if any
 
     rm -rf .git
 
-## Backup files and folders.
+## Backup
 
 Create backup folder
 
     BACKUP_DAY=$(date +%F)
-    BACKUP_DIR=$HOME/.home_backup.$BACKUP_DAY
+    BACKUP_DIR=$HOME/.home_backup/$BACKUP_DAY
     mkdir -p $BACKUP_DIR
 
-Define a backup util function
+Define a backup util function.
+Hidden files will be prefixed with an underscore `_`;
+folders will be flattened:
+for example `~/.foo/bar` will become `_foo_bar`.
 
     function backup_if_any () {
-        TARGET=$(echo $1 | tr / _)
-        [ -e $1 ] && mv -v $1 $BACKUP_DIR/$TARGET.$BACKUP_DAY;
+        TARGET=$(echo $1 | tr / _ | sed 's/^\./_/')
+        [ -e $1 ] && mv -v $1 $BACKUP_DIR/$TARGET;
     }
 
 Backup *.gitignore*, and any file it excludes (i.e. predixed with a `!`)
@@ -62,4 +66,7 @@ Back to previous folder.
     cd -
 
     echo home sweet home
+
+    unset BACKUP_DAY
+    unset BACKUP_DIR
 

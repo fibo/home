@@ -1,11 +1,11 @@
 cd
 rm -rf .git
 BACKUP_DAY=$(date +%F)
-BACKUP_DIR=$HOME/.home_backup.$BACKUP_DAY
+BACKUP_DIR=$HOME/.home_backup/$BACKUP_DAY
 mkdir -p $BACKUP_DIR
 function backup_if_any () {
-    TARGET=$(echo $1 | tr / _)
-    [ -e $1 ] && mv -v $1 $BACKUP_DIR/$TARGET.$BACKUP_DAY;
+    TARGET=$(echo $1 | tr / _ | sed 's/^\./_/')
+    [ -e $1 ] && mv -v $1 $BACKUP_DIR/$TARGET;
 }
 backup_if_any .gitignore
 curl -L https://raw.githubusercontent.com/fibo/home/home/.gitignore \
@@ -23,3 +23,5 @@ git submodule update --init
 git submodule foreach git config core.fileMode false
 cd -
 echo home sweet home
+unset BACKUP_DAY
+unset BACKUP_DIR
