@@ -15,10 +15,9 @@
 To add a file you need to modify *.gitignore* first. For example
 
 ```sh
-cd path/to/repo/fibo/home
 git switch home
-echo '!.zsh/config.sh' >> .gitignore
-git add -f .zsh/config.sh
+echo '!.foo/bar' >> .gitignore
+git add -f .foo/bar
 git commit
 git push origin home
 ```
@@ -31,14 +30,13 @@ To add a new submodule, launch something like
 git submodule add -f https://github.com/foo/bar.git ./relative/path/to/foo/bar
 ```
 
-### Update all submodules
+### Update a submodule
 
 Do something like
 
 ```sh
-cd path/to/repo/fibo/home
-git pull
-git submodule foreach git pull
-git commit -am ':arrow_up: updated submodules'
+cd path/to/repo/submodule
+git pull origin main
+git commit -am ':arrow_up: updated submodule'
 git push
 ```
