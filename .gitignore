@@ -13,18 +13,22 @@
 !.screenrc
 
 # bin
+
 !.fibo/bin/README.md
 !.fibo/bin/ack
 !.fibo/bin/cloc
 
 # ssh
+
 !.ssh/agent
 
 # bash
+
 !.bash/git-aware-prompt
 !.bash/config.sh
 
 # shell
+
 !.shell/aliases.sh
 !.shell/profile.sh
 !.shell/env.sh
@@ -33,7 +37,9 @@
 !.shell/gh-clone
 
 # zsh
+
 !.zsh/config.sh
 !.zsh/CTRL-L.sh
+!.zsh/completion/_git
 !.zsh/completion/git-completion.bash
 !.zsh/completion/npm-completion

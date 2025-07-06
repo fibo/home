@@ -28,7 +28,7 @@ setopt interactivecomments
 # Auto-completion
 ###
 
-fpath=(~/.zsh $fpath)
+fpath=(~/.zsh/completion $fpath)
 autoload -Uz compinit
 compinit -i
 
