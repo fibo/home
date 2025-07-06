@@ -2,11 +2,11 @@
 
 ## Branches
 
-|branch  |description                                                |
-|--------|-----------------------------------------------------------|
-|main    | contains only documentation                               |
-|gh-pages| contains the *init.sh* used in the one-liner installation |
-|home    | everything else: dotfiles, local bins, etc.               |
+| branch   | description                                               |
+|----------|-----------------------------------------------------------|
+| main     | contains only documentation                               |
+| gh-pages | contains the *init.sh* used in the one-liner installation |
+| home     | everything else: dotfiles, local bins, etc.               |
 
 ## How to
 
