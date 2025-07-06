@@ -31,16 +31,8 @@ for example `~/.foo/bar` will become `_foo_bar`.
 
 Backup files and folders, use _.gitignore_ to get the list
 
-    backup_if_any .gitignore
     curl -L https://raw.githubusercontent.com/fibo/home/home/.gitignore \
         | grep ! | cut -d ! -f2 \
-            | while read x; do backup_if_any $x; done
-
-Backup *.gitmodules*, and modules listed in it
-
-    backup_if_any .gitmodules
-    curl -L https://raw.githubusercontent.com/fibo/home/home/.gitmodules \
-        | grep path | cut -d = -f2 \
             | while read x; do backup_if_any $x; done
 
 ## Init home
