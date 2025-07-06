@@ -1,20 +1,29 @@
 # Ignore everything ...
 *
 # ... except the following files and folders
+
+# Notice that this file is also used by init.sh in gh-pages branch
+# to get the list of files and folders to backup.
+
 !.ackrc
 !.editorconfig
 !.gitignore
 !.inputrc
+!.ripgreprc
 !.screenrc
+
 # bin
 !.fibo/bin/README.md
 !.fibo/bin/ack
-!.fibo/bin/clock
+!.fibo/bin/cloc
+
 # ssh
 !.ssh/agent
+
 # bash
 !.bash/git-aware-prompt
 !.bash/config.sh
+
 # shell
 !.shell/aliases.sh
 !.shell/profile.sh
@@ -22,6 +31,7 @@
 !.shell/cleanup_git_branches
 !.shell/dir
 !.shell/gh-clone
+
 # zsh
 !.zsh/config.sh
 !.zsh/CTRL-L.sh
