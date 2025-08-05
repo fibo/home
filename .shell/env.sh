@@ -20,8 +20,3 @@ export PATH="$VOLTA_HOME/bin:$PATH"
 ###
 export PATH="$PATH:$HOME/go/bin"
 
-# Rust
-# https://www.rust-lang.org/
-###
-source "$HOME/.cargo/env"
-
