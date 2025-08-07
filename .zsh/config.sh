@@ -20,7 +20,8 @@ autoload -Uz vcs_info
 precmd() { vcs_info }
 zstyle ':vcs_info:git:*' formats '%b · '
 setopt PROMPT_SUBST
-PROMPT='${vcs_info_msg_0_}%2~/ '
+PROMPT_NEWLINE=$'\n'
+PROMPT='${PROMPT_NEWLINE}${vcs_info_msg_0_}%2~/ ${PROMPT_NEWLINE}'
 
 # enable bash like comments in shell
 setopt interactivecomments
