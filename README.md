@@ -5,11 +5,10 @@ This is the source code of the _init.sh_ script used to [initialize fibo's home]
 
 ## Clean home
 
-First of all, go to `$HOME` directory
-and remove *.git* folder and other git files, if any
+First of all, remember current directory and go to `$HOME` directory.
 
+    INITIAL_WORKING_DIR=`pwd`
     cd
-    rm -rf .git .gitignore .gitmodules
 
 ## Backup
 
@@ -44,22 +43,40 @@ Here we go, create the repo
     git fetch
     git switch home
 
-Init submodules, ignore file mode changes
+Init git repos, define a function to clone a repo.
 
-    git submodule update --init
-    git submodule foreach git config core.fileMode false
+    function clone_repo () {
+        REPO_URL=$1
+        REPO_NAME=$(basename $REPO_URL | cut -d . -f1)
+        [ -e $REPO_NAME ] || git clone $REPO_URL
+    }
+
+    cd ~/.bash
+    clone_repo https://github.com/jimeh/git-aware-prompt.git
+    cd ~/.shell
+    clone_repo https://github.com/fibo/dir.git
+    clone_repo https://github.com/fibo/cleanup_git_branches.git
+    clone_repo https://github.com/fibo/gh-clone.git
 
 ## Finally
 
-Cleanup, in particular remove git files.
+Back to previous folder.
 
-    rm -rf .git .gitignore .gitmodules
+    cd $INITIAL_WORKING_DIR
+    echo home sweet home
+
+### Cleanup
+
+Remove git stuff.
+
+    rm -rf .git .gitignore
+
+Unset variables and functions.
 
     unset BACKUP_DAY
     unset BACKUP_DIR
+    unset INITIAL_WORKING_DIR
 
-Back to previous folder.
-
-    cd -
-    echo home sweet home
+    unset -f backup_if_any
+    unset -f clone_repo
 
