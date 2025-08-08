@@ -24,7 +24,6 @@
 
 # bash
 
-!.bash/git-aware-prompt
 !.bash/config.sh
 
 # shell
@@ -32,9 +31,6 @@
 !.shell/aliases.sh
 !.shell/profile.sh
 !.shell/env.sh
-!.shell/cleanup_git_branches
-!.shell/dir
-!.shell/gh-clone
 
 # zsh
 
