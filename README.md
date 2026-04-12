@@ -1,0 +1,13 @@
+# my Mac home
+
+This project is related to [🏠 My *nix home](https://github.com/fibo/home). It applies the same methodology but on an Apple computer.
+The content in this repository is created assuming that [fibo/home/setup.sh](https://github.com/fibo/home/blob/main/setup.sh) was already launched on your Mac.
+
+## Setup
+
+Same as [fibo/home setup](https://github.com/fibo/home?tab=readme-ov-file#setup).
+
+## License
+
+[MIT](https://fibo.github.io/mit-license/).
+
