@@ -2,6 +2,10 @@
 
 I am using [Homebrew](https://brew.sh/) as the package manager for my Mac. If there were not _Homebrew_ I will probably consider Mac as an OS to do development.
 
+Add shebang to [setup.sh](./setup.sh)
+
+	#!/bin/sh
+
 Turn analytics off.
 
 	brew analytics off

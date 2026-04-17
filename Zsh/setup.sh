@@ -8,9 +8,10 @@ TARGET=.shell/config.zsh
 
 copy_file $SOURCE $TARGET
 
+ZSHRC=$HOME/.zshrc
 SOURCE_CONFIG="source ~/.shell/config.zsh"
 
-if ! grep -q $SOURCE_CONFIG ~/.zshrc; then
-	echo $SOURCE_CONFIG >> ~/.zshrc
-	source ~/.zshrc
+if ! grep -q $SOURCE_CONFIG $ZSHRC; then
+	echo $SOURCE_CONFIG >> $ZSHRC
+	source $ZSHRC
 fi

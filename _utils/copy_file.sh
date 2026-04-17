@@ -11,7 +11,7 @@ copy_file() {
 	COPY=false
 
 	if ! test -e $HOME/$TARGET; then
-		echo Create file $TARGET
+		echo Create file ~/$TARGET
 		COPY=true
 	elif ! cmp -s "$SOURCE" "$HOME/$TARGET"; then
 		echo Source file differs from target: $TARGET

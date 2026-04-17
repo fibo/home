@@ -1,3 +1,4 @@
+#!/bin/sh
 brew analytics off
 brew install direnv
 brew install fzf
