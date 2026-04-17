@@ -14,3 +14,12 @@ function clear-scrollback-buffer {
 zle -N clear-scrollback-buffer
 bindkey '^L' clear-scrollback-buffer && history -p
 
+# https://direnv.net/
+eval "$(direnv hook zsh)"
+
+# https://junegunn.github.io/fzf/
+source <(fzf --zsh)
+
+# https://github.com/BurntSushi/ripgrep
+export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
+

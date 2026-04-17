@@ -33,3 +33,28 @@ Better clear screen: <kbd>CTRL L</kbd> to clear history and scrollback buffer.
 	
 
 Credits [here](https://unix.stackexchange.com/questions/517025/zsh-clear-scrollback-buffer).
+
+## direnv
+
+Load [direnv](../Homebrew/README.md#direnv)
+
+	# https://direnv.net/
+	eval "$(direnv hook zsh)"
+	
+
+## fzf
+
+Set up [fzf](../Homebrew/README.md#fzf) key bindings and fuzzy completion.
+
+	# https://junegunn.github.io/fzf/
+	source <(fzf --zsh)
+	
+
+## ripgrep
+
+Enable [ripgrep](../Homebrew/README.md#ripgrep) configuration.
+
+	# https://github.com/BurntSushi/ripgrep
+	export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
+	
+
