@@ -7,7 +7,7 @@ The content in this repository is created assuming that [fibo/home/setup.sh](htt
 
 Before launching the [setup.sh here](./setup.sh) you need the following requirements:
 
-- [fibo/home setup](https://github.com/fibo/home?tab=readme-ov-file#setup).
+- [fibo/home setup](https://github.com/fibo/home?tab=readme-ov-file#setup). Read also those docs, same logic applies here.
 - [Homebrew](https://brew.sh/)
 
 Then launch the setup to install or update.

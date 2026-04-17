@@ -15,14 +15,11 @@ copy_file() {
 		COPY=true
 	elif ! cmp -s "$SOURCE" "$HOME/$TARGET"; then
 		echo Source file differs from target: $TARGET
-
-		if test $INTERACTIVE; then
-			read -p "Do you want to overwrite it? (yes/no): " CHOICE
-			CHOICE=$(echo $CHOICE | tr '[:upper:]' '[:lower:]')
-			if test "$CHOICE" = "yes" -o "$CHOICE" = "y"; then
-				COPY=true
-			fi
-		fi
+		BACKUP=$HOME/.local/share/home/$TARGET
+		mkdir -p $(dirname $BACKUP)
+		cp $HOME/$TARGET $BACKUP
+		echo Backup copy to $BACKUP
+		COPY=true
 	fi
 
 	if test $COPY = "true"; then
