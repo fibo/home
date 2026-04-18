@@ -6,6 +6,11 @@ setopt PROMPT_SUBST
 PROMPT_NEWLINE=$'\n'
 PROMPT='${PROMPT_NEWLINE}${vcs_info_msg_0_}%2~/ '
 
+# Auto completion
+autoload -Uz compinit
+compinit
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+
 # Clear screen
 function clear-scrollback-buffer {
   clear && printf '\e[3J'

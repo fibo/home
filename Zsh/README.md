@@ -19,6 +19,19 @@ There are so many Zsh amazing prompts, however my choice is to have this custom 
 
 It displays parent folder + current folder and the git branch, if any.
 
+## Auto completion
+
+Initializes programmable completion system.
+
+	# Auto completion
+	autoload -Uz compinit
+	compinit
+
+Small letters will match small and capital letters.
+
+	zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+	
+
 ## Clear screen
 
 Better clear screen: <kbd>CTRL L</kbd> to clear history and scrollback buffer.
@@ -34,7 +47,9 @@ Better clear screen: <kbd>CTRL L</kbd> to clear history and scrollback buffer.
 
 Credits [here](https://unix.stackexchange.com/questions/517025/zsh-clear-scrollback-buffer).
 
-## direnv
+## CLI tools
+
+### direnv
 
 Load [direnv](../Homebrew/README.md#direnv)
 
@@ -42,7 +57,7 @@ Load [direnv](../Homebrew/README.md#direnv)
 	eval "$(direnv hook zsh)"
 	
 
-## fzf
+### fzf
 
 Set up [fzf](../Homebrew/README.md#fzf) key bindings and fuzzy completion.
 
@@ -50,7 +65,7 @@ Set up [fzf](../Homebrew/README.md#fzf) key bindings and fuzzy completion.
 	source <(fzf --zsh)
 	
 
-## ripgrep
+### ripgrep
 
 Enable [ripgrep](../Homebrew/README.md#ripgrep) configuration.
 
