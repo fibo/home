@@ -63,12 +63,37 @@ Enable _bash-like_ comments in shell
 
 ## CLI tools
 
+### dir
+
+Load [dir](https://github.com/fibo/dir) which is a small script to _create a folder and enter into it_.
+
+	# https://github.com/fibo/dir
+	source $HOME/.shell/dir/fun.sh
+	
+
 ### direnv
 
-Load [direnv](../Homebrew/README.md#direnv)
+Load [direnv](../Homebrew/README.md#direnv).
 
 	# https://direnv.net/
 	eval "$(direnv hook zsh)"
+	
+
+### gh-clone
+
+The [gh-clone](https://github.com/fibo/gh-clone) is a _GitHub clone repo util_. Load it and set the (optional) `GITHUB_DIR` folder.
+
+	# https://github.com/fibo/gh-clone
+	source $HOME/.shell/gh-clone/fun.sh
+	export GITHUB_DIR=$HOME/Code/GitHub
+	
+
+### git cleanBranches
+
+Enable [git cleanBranches](https://github.com/fibo/git_cleanBranches) which is a _git command remove unused git branches_.
+
+	# https://github.com/fibo/git_cleanBranches
+	export PATH="$HOME/.shell/git_cleanBranches:$PATH"
 	
 
 ### fzf

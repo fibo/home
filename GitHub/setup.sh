@@ -10,3 +10,4 @@ if [ "$GITHUB_CONFIG" != '[includeIf"gitdir:~/Code/GitHub/"]path=~/Code/GitHub/.
 echo '[includeIf "gitdir:~/Code/GitHub/"]' >> $GITCONFIG
 echo '  path = ~/Code/GitHub/.gitconfig' >> $GITCONFIG
 fi
+

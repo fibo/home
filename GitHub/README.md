@@ -27,5 +27,8 @@ Add the config if it does not exist.
 		echo '[includeIf "gitdir:~/Code/GitHub/"]' >> $GITCONFIG
 		echo '  path = ~/Code/GitHub/.gitconfig' >> $GITCONFIG
 	fi
+	
+
+See also [gh-clone section in Zsh/README.md](../Zsh/README.md#gh-clone) which sets the `GITHUB_DIR` environment variable.
 
 

@@ -25,8 +25,18 @@ export LANG=en_US.UTF-8
 
 setopt interactivecomments
 
+# https://github.com/fibo/dir
+source $HOME/.shell/dir/fun.sh
+
 # https://direnv.net/
 eval "$(direnv hook zsh)"
+
+# https://github.com/fibo/gh-clone
+source $HOME/.shell/gh-clone/fun.sh
+export GITHUB_DIR=$HOME/Code/GitHub
+
+# https://github.com/fibo/git_cleanBranches
+export PATH="$HOME/.shell/git_cleanBranches:$PATH"
 
 # https://junegunn.github.io/fzf/
 source <(fzf --zsh)
