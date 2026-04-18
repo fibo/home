@@ -5,4 +5,6 @@
 ./Homebrew/setup.sh
 ./Zsh/setup.sh
 
-echo Mac sweet home.
+echo
+echo 🏠 Home sweet home.
+echo
