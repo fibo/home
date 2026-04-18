@@ -26,11 +26,17 @@ These are the CLI tools I consider _essential_ for development.
 
 	brew install direnv
 
-# fzf
+### fzf
 
 The [fzf](https://junegunn.github.io/fzf/) is a _command-line fuzzy finder_.
 
 	brew install fzf
+
+### Neovim
+
+Of course [Neovim](https://neovim.io/) is my favourite editor.
+
+	brew install neovim
 
 ### ripgrep
 
