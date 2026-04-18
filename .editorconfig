@@ -1,5 +1,5 @@
 # This .editorconfig assumes that
-# https://github.com/fibo/home/blob/main/EditorConfig/dot-editorconfig is copied to $HOME/.editorconfig
+# ./EditorConfig/dot-editorconfig is copied to $HOME/.editorconfig
 
 # Do not trim white space, since markdown files can contain annotated sources.
 [*.md]

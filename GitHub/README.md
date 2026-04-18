@@ -1,6 +1,6 @@
 # GitHub
 
-Add shebang to [setup.sh](./setup.sh) and import utils
+Add shebang to [setup.sh](./setup.sh) and import utils.
 
 	#!/bin/sh
 	
