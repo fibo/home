@@ -19,6 +19,12 @@ function clear-scrollback-buffer {
 zle -N clear-scrollback-buffer
 bindkey '^L' clear-scrollback-buffer && history -p
 
+# Locale
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
+setopt interactivecomments
+
 # https://direnv.net/
 eval "$(direnv hook zsh)"
 

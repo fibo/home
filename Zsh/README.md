@@ -47,6 +47,20 @@ Better clear screen: <kbd>CTRL L</kbd> to clear history and scrollback buffer.
 
 Credits [here](https://unix.stackexchange.com/questions/517025/zsh-clear-scrollback-buffer).
 
+## Other settings
+
+Ensure locale is set to English and UTF-8.
+
+	# Locale
+	export LC_ALL=en_US.UTF-8
+	export LANG=en_US.UTF-8
+	
+
+Enable _bash-like_ comments in shell
+
+	setopt interactivecomments
+	
+
 ## CLI tools
 
 ### direnv
