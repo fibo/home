@@ -112,3 +112,11 @@ Enable [ripgrep](../Homebrew/README.md#ripgrep) configuration.
 	export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
 	
 
+### z
+
+Load [z](../Homebrew/README.md#z), to _jump around_.
+
+	# https://github.com/rupa/z
+	source $HOMEBREW_PREFIX/etc/profile.d/z.sh
+	
+

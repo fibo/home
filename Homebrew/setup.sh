@@ -5,3 +5,4 @@ brew install fzf
 brew install neovim
 brew install ripgrep
 brew install screen
+brew install z

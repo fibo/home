@@ -44,3 +44,6 @@ source <(fzf --zsh)
 # https://github.com/BurntSushi/ripgrep
 export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
 
+# https://github.com/rupa/z
+source $HOMEBREW_PREFIX/etc/profile.d/z.sh
+

@@ -53,3 +53,9 @@ My favourite terminal multiplexed is [GNU screen](https://www.gnu.org/software/s
 Check the [screen configuration used](../dotfiles/screenrc).
 See also my article about [GNU screen](https://fibo.github.io/2015/05/gnu-screen/).
 
+### z
+
+The [z](https://github.com/rupa/z) util let you _jump around_ quickly to folders
+
+	brew install z
+
