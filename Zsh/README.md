@@ -32,6 +32,13 @@ Small letters will match small and capital letters.
 	zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 	
 
+Load [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions).
+It suggests commands as you type based on history and completions.
+
+	# https://github.com/zsh-users/zsh-autosuggestions
+	source ~/.shell/zsh-autosuggestions/zsh-autosuggestions.zsh
+	
+
 ## Clear screen
 
 Better clear screen: <kbd>CTRL L</kbd> to clear history and scrollback buffer.

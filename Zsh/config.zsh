@@ -11,6 +11,9 @@ autoload -Uz compinit
 compinit
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 
+# https://github.com/zsh-users/zsh-autosuggestions
+source ~/.shell/zsh-autosuggestions/zsh-autosuggestions.zsh
+
 # Clear screen
 function clear-scrollback-buffer {
   clear && printf '\e[3J'
