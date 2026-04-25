@@ -4,6 +4,9 @@ DIR=$(dirname $0)
 source $DIR/../_utils/copy_file.sh
 source $DIR/../_utils/git_repo.sh
 
+# Disable "Last login" message
+touch $HOME/.hushlogin
+
 # Copy config file and add it to zshrc.
 
 copy_file $DIR/config.zsh .shell/config.zsh
