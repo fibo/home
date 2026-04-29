@@ -1,6 +1,0 @@
-shell -$SHELL       # Load shell profile
-defutf8 on          # Always start `screen` with UTF-8 enabled (`screen -U`)
-truecolor on        # Enable colors.
-startup_message off # No welcome message
-vbell off           # Turns visual bell off
-defscrollback 32000 # Set a large scrollback buffer

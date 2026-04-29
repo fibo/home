@@ -44,15 +44,6 @@ The [ripgrep](https://github.com/burntsushi/ripgrep) CLI _recursively searches d
 
 	brew install ripgrep
 
-### screen
-
-My favourite terminal multiplexed is [GNU screen](https://www.gnu.org/software/screen/). One of the main reasons I like it is that it comes pre-installed on Mac. However it is worth to update it to latest version.
-
-	brew install screen
-
-Check the [screen configuration used](../dotfiles/screenrc).
-See also my article about [GNU screen](https://fibo.github.io/2015/05/gnu-screen/).
-
 ### z
 
 The [z](https://github.com/rupa/z) util let you _jump around_ quickly to folders
