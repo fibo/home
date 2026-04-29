@@ -63,8 +63,15 @@ Ensure locale is set to English and UTF-8.
 	export LANG=en_US.UTF-8
 	
 
-Enable _bash-like_ comments in shell
+Enable colorized output in terminal applications, for instance `ls`.
 
+	# Enable colors
+	export CLICOLOR=1
+	
+	
+Enable _bash-like_ comments in shell.
+
+	# Enable comments
 	setopt interactivecomments
 	
 

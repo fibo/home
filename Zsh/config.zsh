@@ -26,6 +26,11 @@ bindkey '^L' clear-scrollback-buffer && history -p
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
+# Enable colors
+export CLICOLOR=1
+
+
+# Enable comments
 setopt interactivecomments
 
 # https://github.com/fibo/dir
