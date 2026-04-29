@@ -32,6 +32,12 @@ The [fzf](https://junegunn.github.io/fzf/) is a _command-line fuzzy finder_.
 
 	brew install fzf
 
+### Mole
+
+With [Mole](https://github.com/tw93/Mole) you can easily clean your Mac.
+
+	brew install mole
+
 ### Neovim
 
 Of course [Neovim](https://neovim.io/) is my favourite editor.
