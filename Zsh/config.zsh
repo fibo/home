@@ -3,8 +3,9 @@ autoload -Uz vcs_info
 precmd() { vcs_info }
 zstyle ':vcs_info:git:*' formats '%b · '
 setopt PROMPT_SUBST
+BG_JOBS="%(1j.%F{red}%B[&]%b%f .)"
 PROMPT_NEWLINE=$'\n'
-PROMPT='${PROMPT_NEWLINE}${vcs_info_msg_0_}%2~/ '
+PROMPT='${BG_JOBS}${PROMPT_NEWLINE}${vcs_info_msg_0_}%2~/ '
 
 # Auto completion
 autoload -Uz compinit

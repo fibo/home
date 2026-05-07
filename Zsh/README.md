@@ -13,11 +13,12 @@ There are so many Zsh amazing prompts, however my choice is to have this custom 
 	precmd() { vcs_info }
 	zstyle ':vcs_info:git:*' formats '%b · '
 	setopt PROMPT_SUBST
+	BG_JOBS="%(1j.%F{red}%B[&]%b%f .)"
 	PROMPT_NEWLINE=$'\n'
-	PROMPT='${PROMPT_NEWLINE}${vcs_info_msg_0_}%2~/ '
+	PROMPT='${BG_JOBS}${PROMPT_NEWLINE}${vcs_info_msg_0_}%2~/ '
 	
 
-It displays parent folder + current folder and the git branch, if any.
+It displays parent folder + current folder and the git branch, if any. It also shows a red indicator if there are jobs in the background.
 
 ## Auto completion
 
