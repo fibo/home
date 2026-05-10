@@ -15,5 +15,4 @@ Zsh:
 	grep '\t' Zsh/README.md | tr -d '\t' > Zsh/config.zsh
 
 npm:
-	echo '#!/bin/sh' > npm/setup.sh
-	grep '\t' npm/README.md | tr -d '\t' >> npm/setup.sh
+	grep '\t' npm/README.md | tr -d '\t' > npm/setup.sh
