@@ -76,6 +76,11 @@ Enable _bash-like_ comments in shell.
 	setopt interactivecomments
 	
 
+Many CLI programs get installed to `$HOME/.local/bin`, add it to the `PATH`.
+
+	export PATH="$HOME/.local/bin:$PATH"
+	
+
 ## CLI tools
 
 ### dir
