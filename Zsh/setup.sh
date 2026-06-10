@@ -7,6 +7,9 @@ source $DIR/../_utils/git_repo.sh
 # Disable "Last login" message
 touch $HOME/.hushlogin
 
+# Completions
+$DIR/completions.sh
+
 # Copy config file and add it to zshrc.
 
 copy_file $DIR/config.zsh .shell/config.zsh

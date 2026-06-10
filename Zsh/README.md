@@ -22,9 +22,10 @@ It displays parent folder + current folder and the git branch, if any. It also s
 
 ## Auto completion
 
-Initializes programmable completion system.
+Initializes programmable completion system. The completions folder added to the `fpath` is same as `COMPLETIONS_FOLDER` in the [completions.sh](./completions.sh) script.
 
 	# Auto completion
+	fpath=(~/.shell/completions $fpath)
 	autoload -Uz compinit
 	compinit
 
