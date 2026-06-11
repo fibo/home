@@ -1,0 +1,36 @@
+# rumdl configuration file
+# https://rumdl.dev/
+
+[global]
+
+disable = [
+  # Using tabs in some unfenced code blocks.
+  "MD010",
+
+  # Some code blocks end with a tab, which is seen as a "blank line".
+  "MD012",
+
+  # No max line lenght.
+  "MD013",
+
+  # Some fenced code blocks do not have a language.
+  "MD040",
+
+  # Most code blocks are not fenced, to be able to extract them easily.
+  "MD046",
+]
+
+exclude = [
+    ".git",
+]
+
+[MD004] # Unordered list style
+style = "dash"
+
+[MD007] # Unordered list indentation
+indent = 2
+
+[MD033] # HTML tags
+allowed-elements = [
+  "kbd"
+]

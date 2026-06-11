@@ -1,4 +1,4 @@
-.PHONY: EditorConfig GitHub Homebrew Zsh npm
+.PHONY: check EditorConfig GitHub Homebrew Zsh npm
 
 all: EditorConfig GitHub Homebrew Zsh npm
 
@@ -16,3 +16,7 @@ Zsh:
 
 npm:
 	grep '\t' npm/README.md | tr -d '\t' > npm/setup.sh
+
+# Check markdown files
+check:
+	rumdl check .

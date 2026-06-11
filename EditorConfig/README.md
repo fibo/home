@@ -6,6 +6,7 @@ Follows the annotated sources for [editorconfig file](./dot-editorconfig)
 
 It is a _top-most EditorConfig file_
 
+	# http://EditorConfig.org
 	root = true
 
 Settings that apply to all files.
@@ -24,12 +25,21 @@ Settings that apply to all files.
 
 For other file specific settings it is fine to override and to have redundancy cause there will be other _.editorconfig_ files in other folders.
 
-### Node
+## Node
 
 Make sure _package.json_ uses indentation style expected by package managers.
 
 	
-	[{package,package-lock}.{json}]
+	[{package,package-lock}.json]
+	indent_style = space
+	indent_size = 2
+
+## TOML
+
+Preferred indentation, see [TOML Example](https://github.com/toml-lang/toml#example).
+
+	
+	[*.toml]
 	indent_style = space
 	indent_size = 2
 

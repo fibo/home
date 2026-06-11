@@ -54,7 +54,7 @@ Better clear screen: <kbd>CTRL L</kbd> to clear history and scrollback buffer.
 	bindkey '^L' clear-scrollback-buffer && history -p
 	
 
-Credits [here](https://unix.stackexchange.com/questions/517025/zsh-clear-scrollback-buffer).
+Code from [this StackEchange thread](https://unix.stackexchange.com/questions/517025/zsh-clear-scrollback-buffer).
 
 ## Other settings
 

@@ -18,7 +18,7 @@ brew leaves
 
 ## CLI tools
 
-These are the CLI tools I consider _essential_ for development.
+These are few CLI tools I want to be installed on my Mac. Most of them are development tools.
 
 ### direnv
 
@@ -55,6 +55,12 @@ Install [Simple Python version management](https://github.com/pyenv/pyenv)
 The [ripgrep](https://github.com/burntsushi/ripgrep) CLI _recursively searches directories for a regex pattern while respecting your gitignore_.
 
 	brew install ripgrep
+
+### rumdl
+
+[rumdl](https://rumdl.dev/) is a _Markdown linter and formatter_ also used in this repo. In particular the [MD057 rule](https://rumdl.dev/md057/) is extremely useful, it checks for broken (internal) links.
+
+	brew install rvben/tap/rumdl
 
 ### z
 

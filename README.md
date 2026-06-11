@@ -40,6 +40,8 @@ Finally there can be other "home repos" with further setups, for example if you 
 
 Most of configuration files or setup scripts are written in a markdown file as _annotated sources_ and extracted by running `make`.
 
+To check markdown files run `make check`.
+
 ## License
 
 [MIT](https://fibo.github.io/mit-license/).
