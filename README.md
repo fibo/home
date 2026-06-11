@@ -34,13 +34,21 @@ Finally there can be other "home repos" with further setups, for example if you 
 > [!NOTE]
 > So this project idea is basically to have a bunch of shell scripts that setup everything.
 
-## KISS-Literate-Programming
+## Development
+
+### KISS-Literate-Programming
 
 [![KLP](https://fibo.github.io/svg/badges/klp.svg)](https://fibo.github.io/kiss-literate-programming)
 
 Most of configuration files or setup scripts are written in a markdown file as _annotated sources_ and extracted by running `make`.
 
-To check markdown files run `make check`.
+### Markdown check
+
+To check markdown files run `make check`. Rules are defined by this [rumdl config](./.rumdl.toml).
+
+### Commit hook
+
+Running `make` will also install this [pre commit hook](./_utils/pre-commit.sh) that will check for markdown files on commit.
 
 ## License
 

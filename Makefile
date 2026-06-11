@@ -1,6 +1,6 @@
-.PHONY: check EditorConfig GitHub Homebrew Zsh npm
+.PHONY: _git_hook check EditorConfig GitHub Homebrew Zsh npm
 
-all: EditorConfig GitHub Homebrew Zsh npm
+all: _git_hook EditorConfig GitHub Homebrew Zsh npm
 
 EditorConfig:
 	grep '\t' EditorConfig/README.md | tr -d '\t' > EditorConfig/dot-editorconfig
@@ -20,3 +20,6 @@ npm:
 # Check markdown files
 check:
 	rumdl check .
+# Install pre-commit hook
+_git_hook:
+	cp ./_utils/pre-commit.sh ./.git/hooks/pre-commit
