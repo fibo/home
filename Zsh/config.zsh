@@ -9,6 +9,7 @@ PROMPT='${BG_JOBS}${PROMPT_NEWLINE}${vcs_info_msg_0_}%2~/ '
 
 # Auto completion
 fpath=(~/.shell/completions $fpath)
+fpath=(~/.shell/zsh-completions/src $fpath)
 autoload -Uz compinit
 compinit
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'

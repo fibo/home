@@ -2,7 +2,6 @@
 
 DIR=$(dirname $0)
 source $DIR/../_utils/copy_file.sh
-source $DIR/../_utils/git_repo.sh
 
 # Disable "Last login" message
 touch $HOME/.hushlogin
@@ -23,13 +22,4 @@ if ! grep -q $SOURCE_CONFIG $ZSHRC; then
 fi
 
 # Install shell dependencies.
-
-cd ~/.shell
-
-git_repo github.com/fibo dir
-git_repo github.com/fibo gh-clone
-git_repo github.com/fibo git_cleanBranches
-git_repo github.com/zsh-users zsh-autosuggestions
-
-cd -
-
+$DIR/dependencies.sh
