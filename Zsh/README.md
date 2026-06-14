@@ -73,12 +73,18 @@ Ensure locale is set to English and UTF-8.
 	export LANG=en_US.UTF-8
 	
 
+Set default editor, of course Vi.
+
+	# I am Vi, Thy Editor
+	export EDITOR=vim
+	
+
 Enable colorized output in terminal applications, for instance `ls`.
 
 	# Enable colors
 	export CLICOLOR=1
 	
-	
+
 Enable _bash-like_ comments in shell.
 
 	# Enable comments
@@ -91,6 +97,10 @@ Many CLI programs get installed to `$HOME/.local/bin`, add it to the `PATH`.
 	
 
 ## CLI tools
+
+	#
+	# CLI tools
+	#
 
 ### dir
 

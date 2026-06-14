@@ -29,15 +29,20 @@ bindkey '^L' clear-scrollback-buffer && history -p
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
+# I am Vi, Thy Editor
+export EDITOR=vim
+
 # Enable colors
 export CLICOLOR=1
-
 
 # Enable comments
 setopt interactivecomments
 
 export PATH="$HOME/.local/bin:$PATH"
 
+#
+# CLI tools
+#
 # https://github.com/fibo/dir
 source $HOME/.shell/dir/fun.sh
 
