@@ -60,7 +60,7 @@ The [ripgrep](https://github.com/burntsushi/ripgrep) CLI _recursively searches d
 
 [rumdl](https://rumdl.dev/) is a _Markdown linter and formatter_ also used in this repo. In particular the [MD057 rule](https://rumdl.dev/md057/) is extremely useful, it checks for broken (internal) links.
 
-	brew install rvben/tap/rumdl
+	brew install rumdl
 
 ### z
 
