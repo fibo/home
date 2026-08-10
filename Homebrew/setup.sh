@@ -1,6 +1,7 @@
 #!/bin/sh
 brew analytics off
 brew install direnv
+brew install ffmpeg-full
 brew install fzf
 brew install mole
 brew install neovim

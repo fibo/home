@@ -26,6 +26,16 @@ These are few CLI tools I want to be installed on my Mac. Most of them are devel
 
 	brew install direnv
 
+### FFmpeg
+
+[FFmpeg](https://ffmpeg.org/) is a complete, cross-platform solution to record, convert and stream audio and video.
+
+Without FFmpeg Internet would not be the same place!!! Check also [Lex Fridman interview with Jean-Baptiste Kempf (lead developer of VLC) and Kieran Kunhya (FFmpeg contributor)](https://www.youtube.com/watch?v=nepKKz-MzFM).
+
+Use `ffmpeg-full` formula to include additional tools and libraries.
+
+	brew install ffmpeg-full
+
 ### fzf
 
 The [fzf](https://junegunn.github.io/fzf/) is a _command-line fuzzy finder_.
