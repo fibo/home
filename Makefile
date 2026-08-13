@@ -1,6 +1,7 @@
 # Keep "_git_hook" and "check" in the first row
 # then a sorted list of actions.
 .PHONY: _git_hook check \
+	Agents \
 	Claude \
 	EditorConfig \
 	GitHub \
@@ -11,6 +12,7 @@
 # Keep "_git_hook" at the beginning and "check" at the end.
 # In between there is a sorted list of actions.
 all: _git_hook \
+	Agents \
 	Claude \
 	EditorConfig \
 	GitHub \
@@ -29,8 +31,12 @@ _git_hook:
 
 # Follows a sorted list of actions.
 
+Agents:
+	markdown2code --lang sh Agents/README.md > Agents/setup.sh
+
 Claude:
 	grep '\t' Claude/README.md | tr -d '\t' > Claude/CLAUDE.md
+	markdown2code --lang json Claude/README.md > Claude/settings.json
 
 EditorConfig:
 	grep '\t' EditorConfig/README.md | tr -d '\t' > EditorConfig/dot-editorconfig

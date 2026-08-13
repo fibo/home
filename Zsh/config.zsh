@@ -49,6 +49,9 @@ source $HOME/.shell/dir/fun.sh
 # https://direnv.net/
 eval "$(direnv hook zsh)"
 
+# https://ffmpeg.org/
+export PATH="/opt/homebrew/opt/ffmpeg-full/bin:$PATH"
+
 # https://github.com/fibo/gh-clone
 source $HOME/.shell/gh-clone/fun.sh
 export GITHUB_DIR=$HOME/Code/GitHub

@@ -36,6 +36,18 @@ Finally there can be other "home repos" with further setups, for example if you 
 
 ## Development
 
+You need `make` to generate files. If you are on Mac or Linux you should have it already, try to run
+
+```shell
+which make
+```
+
+Some commands in the [Makefile](./Makefile) are using [markdown2code](https://github.com/fibo/markdown2code), install it globally
+
+```sh
+npm install markdown2code -g
+```
+
 ### KISS-Literate-Programming
 
 [![KLP](https://fibo.github.io/svg/badges/klp.svg)](https://fibo.github.io/kiss-literate-programming)
@@ -44,7 +56,7 @@ Most of configuration files or setup scripts are written in a markdown file as _
 
 ### Markdown check
 
-To check markdown files run `make check`. Rules are defined by this [rumdl config](./.rumdl.toml).
+To check markdown files run `make check`. Rules are defined by this [rumdl config](./rumdl.toml).
 
 ### Commit hook
 

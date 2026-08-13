@@ -1,9 +1,11 @@
 #!/bin/sh
 
-./dotfiles/setup.sh
+./Agents/setup.sh
+./Claude/setup.sh
 ./GitHub/setup.sh
 ./Homebrew/setup.sh
 ./Zsh/setup.sh
+./dotfiles/setup.sh
 ./npm/setup.sh
 
 echo

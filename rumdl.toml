@@ -16,6 +16,9 @@ disable = [
   # Some fenced code blocks do not have a language.
   "MD040",
 
+  # SKILL.md files has frontmatter.
+  "MD041",
+
   # Most code blocks are not fenced, to be able to extract them easily.
   "MD046",
 ]
