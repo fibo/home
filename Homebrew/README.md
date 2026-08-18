@@ -16,6 +16,24 @@ You can check which _formulas_ are installed with
 brew leaves
 ```
 
+## Software
+
+### Node.js
+
+Install latest [Node.js](https://nodejs.org/) stable version
+
+	brew install node
+
+#### Global npm packages
+
+Install [TypeScript](https://www.typescriptlang.org/) and Node type definitions
+
+	npm install typescript @types/node --global
+
+Install [markdown2code](https://www.npmjs.com/package/markdown2code), which is used also in this repository
+
+	npm install markdown2code --global
+
 ## CLI tools
 
 These are few CLI tools I want to be installed on my Mac. Most of them are development tools.

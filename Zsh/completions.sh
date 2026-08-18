@@ -7,13 +7,21 @@ mkdir -p $COMPLETIONS_FOLDER
 #
 # See https://github.com/zsh-users/zsh-completions/tree/master/src
 
+# Apple container
 if command -v container > /dev/null
 then
 	container --generate-completion-script zsh > $COMPLETIONS_FOLDER/_container
 fi
 
+# Rust
 if command -v rustup > /dev/null
 then
 	rustup completions zsh cargo > $COMPLETIONS_FOLDER/_cargo
 	rustup completions zsh > $COMPLETIONS_FOLDER/_rustup
+fi
+
+# npm
+if command -v npm > /dev/null
+then
+	npm completion > $COMPLETIONS_FOLDER/_npm
 fi
