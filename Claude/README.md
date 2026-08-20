@@ -4,20 +4,26 @@
 
 Create a global CLAUDE.md file with the following content.
 
-	# Claude global instructions
-	
+```md
+# Claude global instructions
+
+```
 
 Do not use `@` links cause they are not valid markdown syntax.
 Using mardkown links instead is something that can be understood both by AI models
 and markdown parsers and linters.
 
-	Use markdown links instead of `@` syntax.
-	
+```md
+Use markdown links instead of `@` syntax.
+
+```
 
 Prefer an AGENT.md file over Claude.md, also the AGENT.md should be included in the git repo, the Claude.md should be not.
 
-	When entering a git repository or worktree, read AGENTS.md file for instructions.
-	
+```md
+When entering a git repository or worktree, read AGENTS.md file for instructions.
+
+```
 
 ## Workflow
 

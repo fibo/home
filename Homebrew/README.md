@@ -4,17 +4,19 @@ I am using [Homebrew](https://brew.sh/) as the package manager for my Mac. If th
 
 Add shebang to [setup.sh](./setup.sh)
 
-	#!/bin/sh
+```sh
+#!/bin/sh
+```
 
 Turn analytics off.
 
-	brew analytics off
+```sh
+brew analytics off
+```
 
 You can check which _formulas_ are installed with
 
-```sh
-brew leaves
-```
+	brew leaves
 
 ## Software
 
@@ -22,17 +24,23 @@ brew leaves
 
 Install latest [Node.js](https://nodejs.org/) stable version
 
-	brew install node
+```sh
+brew install node
+```
 
 #### Global npm packages
 
 Install [TypeScript](https://www.typescriptlang.org/) and Node type definitions
 
-	npm install typescript @types/node --global
+```sh
+npm install typescript @types/node --global
+```
 
 Install [markdown2code](https://www.npmjs.com/package/markdown2code), which is used also in this repository
 
-	npm install markdown2code --global
+```sh
+npm install markdown2code --global
+```
 
 ## CLI tools
 
@@ -42,7 +50,9 @@ These are few CLI tools I want to be installed on my Mac. Most of them are devel
 
 [direnv](https://direnv.net/) can load and unload environment variables depending on the current directory.
 
-	brew install direnv
+```sh
+brew install direnv
+```
 
 ### FFmpeg
 
@@ -52,53 +62,71 @@ Without FFmpeg Internet would not be the same place!!! Check also [Lex Fridman i
 
 Use `ffmpeg-full` formula to include additional tools and libraries.
 
-	brew install ffmpeg-full
+```sh
+brew install ffmpeg-full
+```
 
 ### fzf
 
 The [fzf](https://junegunn.github.io/fzf/) is a _command-line fuzzy finder_.
 
-	brew install fzf
+```sh
+brew install fzf
+```
 
 ### Mole
 
 With [Mole](https://github.com/tw93/Mole) you can easily clean your Mac.
 
-	brew install mole
+```sh
+brew install mole
+```
 
 ### Neovim
 
 Of course [Neovim](https://neovim.io/) is my favourite editor.
 
-	brew install neovim
+```sh
+brew install neovim
+```
 
 ### pyenv
 
 Install [Simple Python version management](https://github.com/pyenv/pyenv)
 
-	brew install pyenv
+```sh
+brew install pyenv
+```
 
 ### ripgrep
 
 The [ripgrep](https://github.com/burntsushi/ripgrep) CLI _recursively searches directories for a regex pattern while respecting your gitignore_.
 
-	brew install ripgrep
+```sh
+brew install ripgrep
+```
 
 ### rumdl
 
 [rumdl](https://rumdl.dev/) is a _Markdown linter and formatter_ also used in this repo. In particular the [MD057 rule](https://rumdl.dev/md057/) is extremely useful, it checks for broken (internal) links.
 
-	brew install rumdl
+```sh
+brew install rumdl
+```
 
 ### Task
 
 [Task](https://taskfile.dev/), the modern task runner, is also used in this repository.
 
-	brew install go-task
+```sh
+brew install go-task
+```
 
 ### z
 
 The [z](https://github.com/rupa/z) util let you _jump around_ quickly to folders
 
-	brew install z
+```sh
+brew install z
+```
 

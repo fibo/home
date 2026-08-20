@@ -33,25 +33,25 @@ tasks:
 
   Claude:
     cmds:
-      - grep '\t' Claude/README.md | tr -d '\t' > Claude/CLAUDE.md
+      - markdown2code --lang md Claude/README.md > Claude/CLAUDE.md
       - markdown2code --lang json Claude/README.md > Claude/settings.json
 
   EditorConfig:
     cmds:
-      - grep '\t' EditorConfig/README.md | tr -d '\t' > EditorConfig/dot-editorconfig
+      - markdown2code --lang ini EditorConfig/README.md > EditorConfig/dot-editorconfig
 
   GitHub:
     cmds:
-      - grep '\t' GitHub/README.md | tr -d '\t' > GitHub/setup.sh
+      - markdown2code --lang sh GitHub/README.md > GitHub/setup.sh
 
   Homebrew:
     cmds:
-      - grep '\t' Homebrew/README.md | tr -d '\t' > Homebrew/setup.sh
+      - markdown2code --lang sh Homebrew/README.md > Homebrew/setup.sh
 
   Zsh:
     cmds:
-      - grep '\t' Zsh/README.md | tr -d '\t' > Zsh/config.zsh
+      - markdown2code --lang zsh Zsh/README.md > Zsh/config.zsh
 
   npm:
     cmds:
-      - grep '\t' npm/README.md | tr -d '\t' > npm/setup.sh
+      - markdown2code --lang sh npm/README.md > npm/setup.sh
