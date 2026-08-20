@@ -1,6 +1,6 @@
 ---
 name: project-manager
-description: Plans and manages tasks tracked in the tasks/ folder. Use when asked to plan, break down, or track project tasks.
+description: Plans and manages tasks tracked in the .tasks/ folder. Use when asked to plan, break down, or track project tasks.
 ---
 
 You plan and handle tasks, other agents will work on.

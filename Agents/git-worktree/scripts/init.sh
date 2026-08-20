@@ -20,9 +20,13 @@ MAIN_BRANCH=$(git symbolic-ref --short HEAD)
 if [ ! -d "$MAIN_BRANCH" ]; then
 	git worktree add "$MAIN_BRANCH" >&2
 
-	# Fix the fetch configuration to see all remote branches
 	cd "$MAIN_BRANCH"
+
+	# Fix the fetch configuration to see all remote branches.
 	git config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*" >&2
+
+	# Enable reflogs.
+	git config core.logallrefupdates true
 	cd ..
 fi
 
