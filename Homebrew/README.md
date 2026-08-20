@@ -46,6 +46,8 @@ npm install markdown2code --global
 
 These are few CLI tools I want to be installed on my Mac. Most of them are development tools.
 
+<!-- keep alphabetical order for CLI tools -->
+
 ### direnv
 
 [direnv](https://direnv.net/) can load and unload environment variables depending on the current directory.
@@ -72,6 +74,14 @@ The [fzf](https://junegunn.github.io/fzf/) is a _command-line fuzzy finder_.
 
 ```sh
 brew install fzf
+```
+
+### Git
+
+Install the latest [Git](https://git-scm.com/) version.
+
+```sh
+brew install git
 ```
 
 ### Mole
