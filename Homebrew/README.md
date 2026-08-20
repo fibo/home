@@ -90,6 +90,12 @@ The [ripgrep](https://github.com/burntsushi/ripgrep) CLI _recursively searches d
 
 	brew install rumdl
 
+### Task
+
+[Task](https://taskfile.dev/), the modern task runner, is also used in this repository.
+
+	brew install go-task
+
 ### z
 
 The [z](https://github.com/rupa/z) util let you _jump around_ quickly to folders

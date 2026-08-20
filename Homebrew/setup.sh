@@ -11,4 +11,5 @@ brew install neovim
 brew install pyenv
 brew install ripgrep
 brew install rumdl
+brew install go-task
 brew install z

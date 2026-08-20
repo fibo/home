@@ -35,6 +35,7 @@
       "Bash(npm run *)",
       "Bash(npm test)",
       "Bash(make *)",
+      "Bash(task *)",
       "Bash(rumdl check *)",
       "Bash($HOME/.claude/skills/git-worktree/scripts/*.sh)",
       "WebSearch"

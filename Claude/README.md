@@ -110,6 +110,7 @@ Other build commands
 
 ```json
       "Bash(make *)",
+      "Bash(task *)",
 ```
 
 Enable `rumdl` to lint markdown files.

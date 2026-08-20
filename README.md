@@ -36,31 +36,24 @@ Finally there can be other "home repos" with further setups, for example if you 
 
 ## Development
 
-You need `make` to generate files. If you are on Mac or Linux you should have it already, try to run
+To generate files, you need
 
-```shell
-which make
-```
+- [`task`](https://taskfile.dev/)
+- [`markdown2code`](https://github.com/fibo/markdown2code)
 
-Some commands in the [Makefile](./Makefile) are using [markdown2code](https://github.com/fibo/markdown2code), install it globally
+To check markdown files run `task check`. You need [rumdl](https://rumdl.dev/). Rules are defined by this [rumdl config](./rumdl.toml).
+
+To install the development tools, the fastest way is to launch
 
 ```sh
-npm install markdown2code -g
+./Homebrew/setup.sh
 ```
 
 ### KISS-Literate-Programming
 
 [![KLP](https://fibo.github.io/svg/badges/klp.svg)](https://fibo.github.io/kiss-literate-programming)
 
-Most of configuration files or setup scripts are written in a markdown file as _annotated sources_ and extracted by running `make`.
-
-### Markdown check
-
-To check markdown files run `make check`. Rules are defined by this [rumdl config](./rumdl.toml).
-
-### Commit hook
-
-Running `make` will also install this [pre commit hook](./_utils/pre-commit.sh) that will check for markdown files on commit.
+Configuration files, setup scripts, etc. are written in a markdown file as _annotated sources_ and extracted by running `task build` or simply `task`.
 
 ## License
 

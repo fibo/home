@@ -1,0 +1,57 @@
+# yaml-language-server: $schema=https://taskfile.dev/schema.json
+
+version: '3'
+
+tasks:
+  default:
+    cmds:
+      - task: build
+
+  build:
+    desc: Run all actions then check
+    cmds:
+      - task: Agents
+      - task: Claude
+      - task: EditorConfig
+      - task: GitHub
+      - task: Homebrew
+      - task: Zsh
+      - task: npm
+      # Keep "check" at the end.
+      - task: check
+
+  check:
+    desc: Check markdown files
+    cmds:
+      - rumdl check .
+
+  # Follows a sorted list of actions.
+
+  Agents:
+    cmds:
+      - markdown2code --lang sh Agents/README.md > Agents/setup.sh
+
+  Claude:
+    cmds:
+      - grep '\t' Claude/README.md | tr -d '\t' > Claude/CLAUDE.md
+      - markdown2code --lang json Claude/README.md > Claude/settings.json
+
+  EditorConfig:
+    cmds:
+      - grep '\t' EditorConfig/README.md | tr -d '\t' > EditorConfig/dot-editorconfig
+
+  GitHub:
+    cmds:
+      - grep '\t' GitHub/README.md | tr -d '\t' > GitHub/setup.sh
+
+  Homebrew:
+    cmds:
+      - grep '\t' Homebrew/README.md | tr -d '\t' > Homebrew/setup.sh
+
+  Zsh:
+    cmds:
+      - grep '\t' Zsh/README.md | tr -d '\t' > Zsh/config.zsh
+
+  npm:
+    cmds:
+      - grep '\t' npm/README.md | tr -d '\t' > npm/setup.sh

@@ -34,14 +34,19 @@ Make sure _package.json_ uses indentation style expected by package managers.
 	indent_style = space
 	indent_size = 2
 
-## TOML
+## Two spaces
 
-Preferred indentation, see [TOML Example](https://github.com/toml-lang/toml#example).
+Files that require or recommend two spaces indentation.
 
 	
-	[*.toml]
+	[*.{toml,yaml,yml}]
 	indent_style = space
 	indent_size = 2
+
+See also
+
+- [YAML](https://yaml.org/) does not allow tabs as indentation.
+- See [TOML Example](https://github.com/toml-lang/toml#example).
 
 ### Make
 
