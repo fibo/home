@@ -150,16 +150,6 @@ eval "$(direnv hook zsh)"
 
 ```
 
-### FFmpeg
-
-Add [ffmpeg-full tools](../Homebrew/README.md#ffmpeg) in your PATH.
-
-```zsh
-# https://ffmpeg.org/
-export PATH="/opt/homebrew/opt/ffmpeg-full/bin:$PATH"
-
-```
-
 ### gh-clone
 
 The [gh-clone](https://github.com/fibo/gh-clone) is a _GitHub clone repo util_. Load it and set the (optional) `GITHUB_DIR` folder.
