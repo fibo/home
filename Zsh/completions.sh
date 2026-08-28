@@ -1,7 +1,7 @@
 #!/bin/zsh
 
-COMPLETIONS_FOLDER=$HOME/.shell/completions
-mkdir -p $COMPLETIONS_FOLDER
+COMPLETIONS_DIR=$HOME/.shell/completions
+mkdir -p $COMPLETIONS_DIR
 
 # Follow completions that are not provided by zsh-completions
 #
@@ -10,18 +10,19 @@ mkdir -p $COMPLETIONS_FOLDER
 # Apple container
 if command -v container > /dev/null
 then
-	container --generate-completion-script zsh > $COMPLETIONS_FOLDER/_container
+	container --generate-completion-script zsh > $COMPLETIONS_DIR/_container
 fi
 
 # Rust
 if command -v rustup > /dev/null
 then
-	rustup completions zsh cargo > $COMPLETIONS_FOLDER/_cargo
-	rustup completions zsh > $COMPLETIONS_FOLDER/_rustup
+	rustup completions zsh cargo > $COMPLETIONS_DIR/_cargo
+	rustup completions zsh > $COMPLETIONS_DIR/_rustup
 fi
 
 # npm
 if command -v npm > /dev/null
 then
-	npm completion > $COMPLETIONS_FOLDER/_npm
+	npm completion > $SHELL_DIR/npm-completion.sh
 fi
+

@@ -28,7 +28,7 @@ It displays parent folder + current folder and the git branch, if any. It also s
 # Auto completion
 ```
 
-The completions folder added to the `fpath` is same as `COMPLETIONS_FOLDER` in the [completions.sh](./completions.sh) script.
+The completions folder added to the `fpath` is same as `COMPLETIONS_DIR` in the [completions.sh script](./completions.sh).
 
 ```zsh
 fpath=(~/.shell/completions $fpath)
@@ -59,8 +59,14 @@ It suggests commands as you type based on history and completions.
 
 ```zsh
 # https://github.com/zsh-users/zsh-autosuggestions
-source ~/.shell/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $HOME/.shell/zsh-autosuggestions/zsh-autosuggestions.zsh
 
+```
+
+The npm completion needs to be sourced.
+
+```zsh
+source $HOME/.shell/npm-completion.sh
 ```
 
 ## Clear screen
