@@ -2,6 +2,7 @@
 
 ./Agents/setup.sh
 ./Claude/setup.sh
+./Git/setup.sh
 ./GitHub/setup.sh
 ./Homebrew/setup.sh
 ./Zsh/setup.sh

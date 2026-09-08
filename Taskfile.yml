@@ -13,6 +13,7 @@ tasks:
       - task: Agents
       - task: Claude
       - task: EditorConfig
+      - task: Git
       - task: GitHub
       - task: Homebrew
       - task: Zsh
@@ -39,6 +40,10 @@ tasks:
   EditorConfig:
     cmds:
       - markdown2code --lang ini EditorConfig/README.md > EditorConfig/dot-editorconfig
+
+  Git:
+    cmds:
+      - markdown2code --lang sh Git/README.md > Git/setup.sh
 
   GitHub:
     cmds:
