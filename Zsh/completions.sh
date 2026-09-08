@@ -1,6 +1,7 @@
 #!/bin/zsh
 
-COMPLETIONS_DIR=$HOME/.shell/completions
+SHELL_DIR=$HOME/.shell
+COMPLETIONS_DIR=$SHELL_DIR/completions
 mkdir -p $COMPLETIONS_DIR
 
 # Follow completions that are not provided by zsh-completions
@@ -26,3 +27,9 @@ then
 	npm completion > $SHELL_DIR/npm-completion.sh
 fi
 
+# Acton
+# https://ton-blockchain.github.io/acton
+if command -v acton > /dev/null
+then
+	acton completions zsh > $COMPLETIONS_DIR/_acton
+fi
