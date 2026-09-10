@@ -92,6 +92,7 @@ Allow commands used by workflow in auto mode, described above.
       "Bash(git diff *)",
       "Bash(git fetch *)",
       "Bash(git log *)",
+      "Bash(git merge --ff-only)",
       "Bash(git rebase *)",
       "Bash(git show *)",
       "Bash(git status *)",
@@ -160,11 +161,10 @@ Of course, do not `sudo`!
     ],
 ```
 
-Ask before git push, merge.
+Ask before git push.
 
 ```json
     "ask": [
-      "Bash(git merge --ff-only *)",
       "Bash(git push)",
       "Bash(git push --force-with-lease)"
     ]
