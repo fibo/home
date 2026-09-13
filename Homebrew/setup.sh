@@ -6,6 +6,7 @@ npm install markdown2code --global
 brew install direnv
 brew install fzf
 brew install git
+brew install imagemagick
 brew install mole
 brew install neovim
 brew install pyenv

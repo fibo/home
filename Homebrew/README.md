@@ -72,6 +72,14 @@ Install the latest [Git](https://git-scm.com/) version.
 brew install git
 ```
 
+### ImageMagick
+
+[ImageMagick](https://formulae.brew.sh/formula/imagemagick) is a tool suite to create, edit, compose, or convert bitmap images.
+
+```sh
+brew install imagemagick
+```
+
 ### Mole
 
 With [Mole](https://github.com/tw93/Mole) you can easily clean your Mac.
