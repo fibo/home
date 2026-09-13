@@ -18,6 +18,22 @@ Use markdown links instead of `@` syntax.
 
 ```
 
+No AI slop!
+
+```md
+Be minimal: avoid unnecessary comments, verbose output, boilerplate.
+
+```
+
+## Git workflow
+
+The preferred workflow uses _git worktrees_ and a _bare git repo_. Use the [git-worktree skill](../Agents/git-worktree/) to handle tasks.
+
+```md
+## Git workflow
+
+```
+
 Prefer an AGENT.md file over Claude.md, also the AGENT.md should be included in the git repo, the Claude.md should be not.
 
 ```md
@@ -25,9 +41,19 @@ When entering a git repository or worktree, read AGENTS.md file for instructions
 
 ```
 
-## Workflow
+Claude should not commit or push on its own; that decision belongs to a human.
+Before committing, it must show the `git status` and the proposed commit
+message, and wait for approval.
 
-The preferred workflow uses _git worktrees_ and a _bare git repo_. Use the [git-worktree skill](../Agents/git-worktree/) to handle tasks.
+```md
+
+Only run `git commit` and `git push` when a human asks for it.
+Before committing, always show the `git status` and the proposed commit message, and wait for human approval.
+Commit messages must be a single line, written in the imperative mood, lowercase except where upper case makes sense, for example proper naming or acronyms.
+Never add AI attribution or co-author lines to commits or pull requests.
+
+```
+
 
 ## Claude settings
 
@@ -139,17 +165,10 @@ Finally, allow web search.
     ],
 ```
 
-Deny git add and commit: this task should be done by a human.
-
-```json
-    "deny": [
-      "Bash(git add *)",
-      "Bash(git commit *)",
-```
-
 Avoid installing new npm packages, same for `npx`.
 
 ```json
+    "deny": [
       "Bash(npm install *)",
       "Bash(npx *)",
 ```
@@ -161,10 +180,13 @@ Of course, do not `sudo`!
     ],
 ```
 
-Ask before git push.
+Commit and push should only happen when a human explicitly asks for it,
+so ask for confirmation instead of denying them outright.
 
 ```json
     "ask": [
+      "Bash(git add *)",
+      "Bash(git commit *)",
       "Bash(git push)",
       "Bash(git push --force-with-lease)"
     ]
