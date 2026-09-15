@@ -13,4 +13,5 @@ brew install pyenv
 brew install ripgrep
 brew install rumdl
 brew install go-task
+brew install tree
 brew install z

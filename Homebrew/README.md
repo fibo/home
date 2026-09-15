@@ -128,6 +128,14 @@ brew install rumdl
 brew install go-task
 ```
 
+### tree
+
+[tree](https://oldmanprogrammer.net/source.php?dir=projects/tree) lists directory contents in a tree-like format.
+
+```sh
+brew install tree
+```
+
 ### z
 
 The [z](https://github.com/rupa/z) util let you _jump around_ quickly to folders
