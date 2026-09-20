@@ -3,6 +3,7 @@ brew analytics off
 brew install node
 npm install typescript @types/node --global
 npm install markdown2code --global
+brew install awscli
 brew install direnv
 brew install fzf
 brew install git

@@ -48,6 +48,14 @@ These are few CLI tools I want to be installed on my Mac. Most of them are devel
 
 <!-- keep alphabetical order for CLI tools -->
 
+### AWS CLI
+
+The [AWS CLI](https://formulae.brew.sh/formula/awscli) is a unified tool to manage your AWS services.
+
+```sh
+brew install awscli
+```
+
 ### direnv
 
 [direnv](https://direnv.net/) can load and unload environment variables depending on the current directory.
