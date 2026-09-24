@@ -71,17 +71,19 @@ In some cases the human may want to handle this step locally.
 
 Ask or wait for human input to know the next step.
 
-For example to rebase locally into `<main>`:
+For example to integrate locally into `<main>`:
 
 - rebase the task branch onto `<main>`, in case of git conflicts ask/wait for human intervention
-- fast-forward `<main>` onto the task branch
+- fast-forward `<main>` to the task branch
 
 Something like
 
 	cd ../task-name
-	git rebase main
+	git rebase <main>
 	cd ../<main>
 	git merge --ff-only task-name
+
+If the task branched from a worktree other than `<main>`, use that branch in place of `<main>`.
 
 Finally archive the task:
 
