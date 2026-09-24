@@ -5,6 +5,7 @@
 ./Git/setup.sh
 ./GitHub/setup.sh
 ./Homebrew/setup.sh
+./Neovim/setup.sh
 ./Zsh/setup.sh
 ./dotfiles/setup.sh
 ./npm/setup.sh

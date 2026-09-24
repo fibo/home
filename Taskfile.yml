@@ -16,6 +16,7 @@ tasks:
       - task: Git
       - task: GitHub
       - task: Homebrew
+      - task: Neovim
       - task: Zsh
       - task: npm
       # Keep "check" at the end.
@@ -52,6 +53,11 @@ tasks:
   Homebrew:
     cmds:
       - markdown2code --lang sh Homebrew/README.md > Homebrew/setup.sh
+
+  Neovim:
+    cmds:
+      - markdown2code --lang sh Neovim/README.md > Neovim/setup.sh
+      - markdown2code --lang lua Neovim/README.md > Neovim/init.lua
 
   Zsh:
     cmds:
