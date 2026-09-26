@@ -13,16 +13,11 @@ root = true
 
 Settings that apply to all files.
 
-> [!IMPORTANT]
-> Notice that `indent_style` is set to `tab`.
-
 ```ini
 
 [*]
 charset = utf-8
 end_of_line = lf
-indent_style = tab
-indent_size = 8
 insert_final_newline = true
 trim_trailing_whitespace = true
 ```
