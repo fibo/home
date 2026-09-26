@@ -1,4 +1,5 @@
 #!/bin/sh
+export HOMEBREW_NO_ASK=1
 brew analytics off
 brew install node
 npm install typescript @types/node --global

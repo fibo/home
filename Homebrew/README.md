@@ -8,6 +8,12 @@ Add shebang to [setup.sh](./setup.sh)
 #!/bin/sh
 ```
 
+Do not ask for confirmation before installing.
+
+```sh
+export HOMEBREW_NO_ASK=1
+```
+
 Turn analytics off.
 
 ```sh
