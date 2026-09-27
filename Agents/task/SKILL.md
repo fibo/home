@@ -1,6 +1,6 @@
 ---
-name: git-worktree
-description: How agents should achieve tasks using git worktrees
+name: task
+description: How agents should plan, track and achieve tasks, using git worktrees and a .tasks/ folder
 ---
 
 A proper "task name" has no spaces, possibly in kebab-case, for example `task-name`.
@@ -26,7 +26,7 @@ Parse the invocation argument (if any) into `task-name` and `goal`:
 
 1. No argument: ask the human directly (plain text, not a multiple-choice tool) for
    the goal of the task, then derive a short kebab-case `task-name` from their answer.
-2. A single word (no spaces), e.g. `/git-worktree task-name`: use it as `task-name`.
+2. A single word (no spaces), e.g. `/task task-name`: use it as `task-name`.
 3. Multiple words / a phrase: treat the whole argument as the `goal`, and derive a
    short kebab-case `task-name` from it.
 
@@ -43,6 +43,13 @@ Check the `.tasks/` folder:
     # task-name
 
     task goal...
+
+The _tasks folder_ is a sort of local _Getting Things Done_ board, and it is not necessarily associated to a git repository: for example a macro project with multiple git repositories.
+A task folder can contain other files, like images or other assets. A task README.md can link other tasks, even in some other _tasks folder_ in another project, for example a sub-task, a requirement or a blocker.
+
+Every time the _tasks folder_ contents are modified, check there are no broken links with [rumdl](https://rumdl.dev)
+
+    rumdl check .tasks/
 
 Every task has also an homonym branch and folder with its related git worktree.
 
@@ -94,4 +101,6 @@ For example, if the branch was rebased locally, run in the container folder
 
 	git worktree remove task-name
 	mv .tasks/<task-name> .tasks/.DONE/
+
+If the task was referenced by a link, update the link to point to the `.tasks/.DONE/` folder.
 

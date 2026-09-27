@@ -27,7 +27,7 @@ Be minimal: avoid unnecessary comments, verbose output, boilerplate.
 
 ## Git workflow
 
-The preferred workflow uses _git worktrees_ and a _bare git repo_. Use the [git-worktree skill](../Agents/git-worktree/) to handle tasks.
+The preferred workflow uses _git worktrees_ and a _bare git repo_. Use the [task skill](../Agents/task/) to handle tasks.
 
 ```md
 ## Git workflow
@@ -152,10 +152,10 @@ Enable `rumdl` to lint markdown files.
       "Bash(rumdl check *)",
 ```
 
-Enable scripts used by [git-worktree skill](../Agents/git-worktree/).
+Enable scripts used by [task skill](../Agents/task/).
 
 ```json
-      "Bash($HOME/.claude/skills/git-worktree/scripts/*.sh)",
+      "Bash($HOME/.claude/skills/task/scripts/*.sh)",
 ```
 
 Finally, allow web search.

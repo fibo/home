@@ -1,8 +1,8 @@
 # Agent skills
 
-Every sub-folder of this folder is an agent skill: for example [git-worktree](./git-worktree/).
+Every sub-folder of this folder is an agent skill: for example [task](./task/).
 
-Every markdown file in this folder, except this README.md itself, is a _SubAgent_: for example [project-manager.md](./project-manager.md).
+Every markdown file in this folder, except this README.md itself, is a _SubAgent_.
 
 ## Setup
 
