@@ -3,7 +3,8 @@
 DIR=$(dirname $0)
 source $DIR/../_utils/git_repo.sh
 
-cd ~/.shell
+mkdir -p $HOME/.shell
+cd $HOME/.shell
 
 git_repo github.com/fibo dir
 git_repo github.com/fibo gh-clone

@@ -62,6 +62,8 @@ tasks:
   Zsh:
     cmds:
       - markdown2code --lang zsh Zsh/README.md > Zsh/config.zsh
+      - markdown2code --lang sh Zsh/completions.md > Zsh/completions.sh
+      - markdown2code --lang sh Zsh/dependencies.md > Zsh/dependencies.sh
 
   npm:
     cmds:
