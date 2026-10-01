@@ -60,4 +60,3 @@ Every _Makefile_ should use tabs.
 [Makefile]
 indent_style = tab
 ```
-

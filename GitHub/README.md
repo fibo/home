@@ -18,7 +18,7 @@ copy_file $DIR/gitconfig Code/GitHub/.gitconfig
 
 In my _$HOME/.gitconfig_ I need to reference it with
 
-```
+```ini
 [includeIf "gitdir:~/Code/GitHub/"]
   path = ~/Code/GitHub/.gitconfig
 ```
@@ -36,5 +36,3 @@ fi
 ```
 
 See also [gh-clone section in Zsh/README.md](../Zsh/README.md#gh-clone) which sets the `GITHUB_DIR` environment variable.
-
-

@@ -157,4 +157,3 @@ The [z](https://github.com/rupa/z) util let you _jump around_ quickly to folders
 ```sh
 brew install z
 ```
-

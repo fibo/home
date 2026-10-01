@@ -58,4 +58,3 @@ Configuration files, setup scripts, etc. are written in a markdown file as _anno
 ## License
 
 [MIT](https://fibo.github.io/mit-license/).
-

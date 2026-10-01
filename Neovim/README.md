@@ -160,4 +160,3 @@ Copy [base config](./init.lua)
 
 copy_file $DIR/init.lua .config/nvim/init.lua
 ```
-

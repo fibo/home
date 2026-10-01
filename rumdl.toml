@@ -4,17 +4,8 @@
 [global]
 
 disable = [
-  # Using tabs in some unfenced code blocks.
-  "MD010",
-
-  # Some code blocks end with a tab, which is seen as a "blank line".
-  "MD012",
-
   # No max line lenght.
   "MD013",
-
-  # Some fenced code blocks do not have a language.
-  "MD040",
 
   # SKILL.md files has frontmatter.
   "MD041",

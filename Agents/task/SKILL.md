@@ -103,4 +103,3 @@ For example, if the branch was rebased locally, run in the container folder
 	mv .tasks/<task-name> .tasks/.DONE/
 
 If the task was referenced by a link, update the link to point to the `.tasks/.DONE/` folder.
-

@@ -39,4 +39,3 @@ In case you want to set author name and URL do something like
 
 	npm config set init-author-name "Gianluca Casati"
 	npm config set init-author-url https://fibo.github.io
-

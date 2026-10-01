@@ -46,14 +46,11 @@ Before committing, it must show the `git status` and the proposed commit
 message, and wait for approval.
 
 ```md
-
 Only run `git commit` and `git push` when a human asks for it.
 Before committing, always show the `git status` and the proposed commit message, and wait for human approval.
 Commit messages must be a single line, written in the imperative mood, lowercase except where upper case makes sense, for example proper naming or acronyms.
 Never add AI attribution or co-author lines to commits or pull requests.
-
 ```
-
 
 ## Claude settings
 
