@@ -21,3 +21,7 @@ if command -v acton > /dev/null
 then
 	acton completions zsh > $COMPLETIONS_DIR/_acton
 fi
+if command -v bd > /dev/null
+then
+	bd completion zsh > $COMPLETIONS_DIR/_bd
+fi

@@ -53,3 +53,14 @@ then
 	acton completions zsh > $COMPLETIONS_DIR/_acton
 fi
 ```
+
+## Beads
+
+[Beads](https://beads.gascity.com/) is a lightweight issue tracker with first-class dependency support.
+
+```sh
+if command -v bd > /dev/null
+then
+	bd completion zsh > $COMPLETIONS_DIR/_bd
+fi
+```
