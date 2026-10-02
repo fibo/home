@@ -86,6 +86,22 @@ Install the latest [Git](https://git-scm.com/) version.
 brew install git
 ```
 
+### GitHub CLI
+
+[GitHub CLI](https://cli.github.com/) brings GitHub to the terminal. I use it mainly for AI tasks.
+
+```sh
+brew install gh
+```
+
+Login with
+
+	gh auth login
+
+Check login status with
+
+	gh auth status
+
 ### ImageMagick
 
 [ImageMagick](https://formulae.brew.sh/formula/imagemagick) is a tool suite to create, edit, compose, or convert bitmap images.

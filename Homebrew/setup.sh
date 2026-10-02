@@ -8,6 +8,7 @@ brew install awscli
 brew install direnv
 brew install fzf
 brew install git
+brew install gh
 brew install imagemagick
 brew install mole
 brew install neovim
