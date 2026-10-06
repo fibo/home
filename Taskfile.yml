@@ -19,6 +19,7 @@ tasks:
       - task: Neovim
       - task: Zsh
       - task: npm
+      - task: shell
       # Keep "check" at the end.
       - task: check
 
@@ -69,3 +70,8 @@ tasks:
   npm:
     cmds:
       - markdown2code --lang sh npm/README.md > npm/setup.sh
+
+  shell:
+    cmds:
+      - markdown2code --lang sh shell/README.md > shell/setup.sh
+      - markdown2code --lang sh shell/aliases.md > shell/aliases.sh

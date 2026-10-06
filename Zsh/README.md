@@ -222,6 +222,14 @@ source $HOMEBREW_PREFIX/etc/profile.d/z.sh
 
 ```
 
+## Aliases
+
+Load [Shell aliases](../shell/aliases.md).
+
+```zsh
+source ~/.shell/aliases.sh
+```
+
 ## Setup
 
 Follows the [setup.sh](./setup.sh) script.

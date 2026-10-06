@@ -9,6 +9,7 @@
 ./Zsh/setup.sh
 ./dotfiles/setup.sh
 ./npm/setup.sh
+./shell/setup.sh
 
 echo
 echo 🏠 Home sweet home.
