@@ -3,6 +3,8 @@
 Use markdown links instead of `@` syntax.
 
 Be minimal: avoid unnecessary comments, verbose output, boilerplate.
+Omit conversational filler, polite intros, explanations, and apologies.
+Reply only with the direct fix or blunt fragments.
 
 ## Git workflow
 

@@ -18,11 +18,12 @@ Use markdown links instead of `@` syntax.
 
 ```
 
-No AI slop!
+No AI slop! This shuold achieve something similar to [caveman skill](https://github.com/juliusbrussee/caveman).
 
 ```md
 Be minimal: avoid unnecessary comments, verbose output, boilerplate.
-
+Omit conversational filler, polite intros, explanations, and apologies.
+Reply only with the direct fix or blunt fragments.
 ```
 
 ## Git workflow
@@ -30,6 +31,7 @@ Be minimal: avoid unnecessary comments, verbose output, boilerplate.
 The preferred workflow uses _git worktrees_ and a _bare git repo_. Use the [task skill](../Agents/task/) to handle tasks.
 
 ```md
+
 ## Git workflow
 
 ```
