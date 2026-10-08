@@ -7,4 +7,5 @@ mkdir -p $HOME/.claude
 
 copy_file $DIR/CLAUDE.md .claude/CLAUDE.md
 copy_file $DIR/settings.json .claude/settings.json
+copy_file $DIR/statusline.sh .claude/statusline.sh
 

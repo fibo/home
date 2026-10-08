@@ -110,6 +110,14 @@ Check login status with
 brew install imagemagick
 ```
 
+### jq
+
+[jq](https://jqlang.org/) is a command-line JSON processor.
+
+```sh
+brew install jq
+```
+
 ### Mole
 
 With [Mole](https://github.com/tw93/Mole) you can easily clean your Mac.

@@ -5,6 +5,10 @@
   },
   "effortLevel": "medium",
   "theme": "dark",
+  "statusLine": {
+    "type": "command",
+    "command": "sh $HOME/.claude/statusline.sh"
+  },
   "permissions": {
     "defaultMode": "auto",
     "read": {

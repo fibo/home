@@ -74,6 +74,15 @@ Notice that:
   "theme": "dark",
 ```
 
+Use a custom [status line](./statusline.md).
+
+```json
+  "statusLine": {
+    "type": "command",
+    "command": "sh $HOME/.claude/statusline.sh"
+  },
+```
+
 ### Permissions
 
 Setup permission to enable auto mode safely.

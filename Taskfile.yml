@@ -38,6 +38,7 @@ tasks:
     cmds:
       - markdown2code --lang md Claude/README.md > Claude/CLAUDE.md
       - markdown2code --lang json Claude/README.md > Claude/settings.json
+      - markdown2code --lang sh Claude/statusline.md > Claude/statusline.sh
 
   EditorConfig:
     cmds:
