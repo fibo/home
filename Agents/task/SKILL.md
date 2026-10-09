@@ -24,8 +24,11 @@ Every worktree is created as a visible folder with the same name of its branch.
 
 Parse the invocation argument (if any) into `task-name` and `goal`:
 
-1. No argument: ask the human directly (plain text, not a multiple-choice tool) for
-   the goal of the task, then derive a short kebab-case `task-name` from their answer.
+1. No argument: show a summary of the tasks.
+   Read `.tasks/README.md` first, it may define a richer summary mode.
+   Otherwise list the folders in `.tasks/` (not `.DONE/`) with their goal, and `git worktree list`,
+   flagging a task with no worktree or a worktree with no task.
+   Print one compact table, recommend one next step, and wait for the human's answer.
 2. A single word (no spaces), e.g. `/task task-name`: use it as `task-name`.
 3. Multiple words / a phrase: treat the whole argument as the `goal`, and derive a
    short kebab-case `task-name` from it.
