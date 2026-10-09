@@ -152,9 +152,12 @@ source $HOME/.shell/dir/fun.sh
 
 Load [direnv](../Homebrew/README.md#direnv).
 
+The hook skips `precmd` and runs only on `cd`, so also load the current folder at shell startup, for example when opening a new Terminal tab.
+
 ```zsh
 # https://direnv.net/
 eval "$(direnv hook zsh)"
+eval "$(direnv export zsh 2>/dev/null)"
 
 ```
 

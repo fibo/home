@@ -49,6 +49,7 @@ source $HOME/.shell/dir/fun.sh
 
 # https://direnv.net/
 eval "$(direnv hook zsh)"
+eval "$(direnv export zsh 2>/dev/null)"
 
 # https://github.com/fibo/gh-clone
 source $HOME/.shell/gh-clone/fun.sh
