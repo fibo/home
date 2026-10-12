@@ -5,7 +5,6 @@ Follows the annotated sources for [aliases.sh file](./aliases.sh).
 ```sh
 # Aliases
 ###
-
 ```
 
 ## Thy Editor
@@ -14,7 +13,6 @@ Use `vi` for NeoVim, `vim` for good old `Vim`.
 
 ```sh
 alias vi='nvim '
-
 ```
 
 ## Navigation
@@ -29,7 +27,6 @@ List all files, with details, sorted by time and with colors.
 
 ```sh
 alias ','='ls -Galrth;'
-
 ```
 
 ## npm
@@ -45,7 +42,6 @@ Type `nr + Space + Tab` or `nr + Tab + Tab` to get auto-completion for package.j
 
 ```sh
 alias nr='npm run'
-
 ```
 
 ## Bun
@@ -54,7 +50,6 @@ Same as above `nr` alias, but with [Bun](https://bun.sh).
 
 ```sh
 alias br='bun run'
-
 ```
 
 ## Git

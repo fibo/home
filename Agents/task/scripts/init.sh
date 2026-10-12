@@ -4,13 +4,13 @@
 set -e
 
 if [ -d .git ]; then
-	echo ".git is a folder, this folder is an ordinary git repo" >&2
-	exit 1
+    echo ".git is a folder, this folder is an ordinary git repo" >&2
+    exit 1
 fi
 
 if [ ! -f .git ]; then
-	echo ".git is not a file, this folder is not a container of a git bare repo and its related worktrees" >&2
-	exit 1
+    echo ".git is not a file, this folder is not a container of a git bare repo and its related worktrees" >&2
+    exit 1
 fi
 
 # Create main branch worktree, if it does not exist.
@@ -18,16 +18,16 @@ fi
 MAIN_BRANCH=$(git symbolic-ref --short HEAD)
 
 if [ ! -d "$MAIN_BRANCH" ]; then
-	git worktree add "$MAIN_BRANCH" >&2
+    git worktree add "$MAIN_BRANCH" >&2
 
-	cd "$MAIN_BRANCH"
+    cd "$MAIN_BRANCH"
 
-	# Fix the fetch configuration to see all remote branches.
-	git config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*" >&2
+    # Fix the fetch configuration to see all remote branches.
+    git config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*" >&2
 
-	# Enable reflogs.
-	git config core.logallrefupdates true
-	cd ..
+    # Enable reflogs.
+    git config core.logallrefupdates true
+    cd ..
 fi
 
 # Create tasks folder.

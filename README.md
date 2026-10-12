@@ -36,18 +36,21 @@ Finally there can be other "home repos" with further setups, for example if you 
 
 ## Development
 
+To install the development tools, launch
+
+```sh
+./Homebrew/setup.sh
+```
+
 To generate files, you need
 
 - [`task`](https://taskfile.dev/)
 - [`markdown2code`](https://github.com/fibo/markdown2code)
 
-To check markdown files run `task check`. You need [rumdl](https://rumdl.dev/). Rules are defined by this [rumdl config](./rumdl.toml).
+To check files run `task check`. You need
 
-To install the development tools, the fastest way is to launch
-
-```sh
-./Homebrew/setup.sh
-```
+- [rumdl](https://rumdl.dev/) for markdown. Rules are defined by this [rumdl config](./rumdl.toml).
+- [shfmt](https://github.com/mvdan/sh/tree/master) for shell scripts.
 
 ### KISS-Literate-Programming
 

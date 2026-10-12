@@ -157,6 +157,5 @@ source $DIR/../_utils/copy_file.sh
 Copy [base config](./init.lua)
 
 ```sh
-
 copy_file $DIR/init.lua .config/nvim/init.lua
 ```

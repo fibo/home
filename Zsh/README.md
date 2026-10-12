@@ -244,7 +244,6 @@ Add shebang to [setup.sh](./setup.sh) and import utils.
 
 DIR=$(dirname $0)
 source $DIR/../_utils/copy_file.sh
-
 ```
 
 Disable "Last login" message.
@@ -262,8 +261,8 @@ ZSHRC=$HOME/.zshrc
 SOURCE_CONFIG="source ~/.shell/config.zsh"
 
 if ! grep -q $SOURCE_CONFIG $ZSHRC; then
-	echo $SOURCE_CONFIG >> $ZSHRC
-	source $ZSHRC
+    echo $SOURCE_CONFIG >>$ZSHRC
+    source $ZSHRC
 fi
 ```
 

@@ -158,6 +158,14 @@ brew install ripgrep
 brew install rumdl
 ```
 
+### shfmt
+
+[shfmt](https://github.com/mvdan/sh) is a shell parser, formatter, and interpreter.
+
+```sh
+brew install shfmt
+```
+
 ### Task
 
 [Task](https://taskfile.dev/), the modern task runner, is also used in this repository.

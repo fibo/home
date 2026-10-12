@@ -13,7 +13,6 @@ Add shebang to [setup.sh](./setup.sh) and import utils.
 
 DIR=$(dirname $0)
 source $DIR/../_utils/copy_file.sh
-
 ```
 
 Copy [aliases](./aliases.md) file and add it to zshrc.
@@ -25,6 +24,6 @@ ZSHRC=$HOME/.zshrc
 SOURCE_ALIASES="source ~/.shell/aliases.sh"
 
 if ! grep -q "$SOURCE_ALIASES" $ZSHRC; then
-	echo $SOURCE_ALIASES >> $ZSHRC
+    echo $SOURCE_ALIASES >>$ZSHRC
 fi
 ```

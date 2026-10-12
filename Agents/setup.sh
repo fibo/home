@@ -16,30 +16,25 @@ mkdir -p $CLAUDE_SUBAGENTS_DIR
 
 # Install skills
 
-ls -1 $DIR | while read SKILL
-	do
-		test -d $DIR/$SKILL || continue
-		SOURCE_DIR=$DIR/$SKILL
-		TARGET_DIR=.agents/skills/$SKILL
+ls -1 $DIR | while read SKILL; do
+    test -d $DIR/$SKILL || continue
+    SOURCE_DIR=$DIR/$SKILL
+    TARGET_DIR=.agents/skills/$SKILL
 
-		copy_file $SOURCE_DIR/SKILL.md $TARGET_DIR/SKILL.md
+    copy_file $SOURCE_DIR/SKILL.md $TARGET_DIR/SKILL.md
 
-		if test -d $SOURCE_DIR/scripts
-			then
-				mkdir -p $HOME/$TARGET_DIR/scripts/
-				ls -1 $SOURCE_DIR/scripts | while read FILE
-					do
-						copy_file $SOURCE_DIR/scripts/$FILE $TARGET_DIR/scripts/$FILE
-					done
-		fi
-		ln -sf $HOME/$TARGET_DIR $CLAUDE_SKILLS_DIR/$SKILL
-	done
-
+    if test -d $SOURCE_DIR/scripts; then
+        mkdir -p $HOME/$TARGET_DIR/scripts/
+        ls -1 $SOURCE_DIR/scripts | while read FILE; do
+            copy_file $SOURCE_DIR/scripts/$FILE $TARGET_DIR/scripts/$FILE
+        done
+    fi
+    ln -sf $HOME/$TARGET_DIR $CLAUDE_SKILLS_DIR/$SKILL
+done
 # Install sub-agents
 
-ls -1 $DIR | grep -v README.md | grep .md | while read FILE
-	do
-		copy_file $DIR/$FILE .agents/$FILE
+ls -1 $DIR | grep -v README.md | grep .md | while read FILE; do
+    copy_file $DIR/$FILE .agents/$FILE
 
-		ln -sf $AGENTS_DIR/$FILE $CLAUDE_SUBAGENTS_DIR/$FILE
-	done
+    ln -sf $AGENTS_DIR/$FILE $CLAUDE_SUBAGENTS_DIR/$FILE
+done

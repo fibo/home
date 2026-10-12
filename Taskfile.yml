@@ -20,13 +20,24 @@ tasks:
       - task: Zsh
       - task: npm
       - task: shell
-      # Keep "check" at the end.
-      - task: check
+      # Keep "check" scripts at the end.
+      - task: check_shell_scripts
 
   check:
-    desc: Check markdown files
+    desc: Check files
+    cmds:
+      - task: check_markdown
+      - task: check_shell_scripts
+
+  check_markdown:
+    desc: Lint markdown files
     cmds:
       - rumdl check .
+
+  check_shell_scripts:
+    desc: Check shell files format
+    cmds:
+      - git ls-files '*.sh' | xargs shfmt --diff
 
   # Follows a sorted list of actions.
 

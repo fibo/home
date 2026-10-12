@@ -12,34 +12,30 @@ Add shebang to [completions.sh](./completions.sh), define a `COMPLETIONS_DIR` an
 SHELL_DIR=$HOME/.shell
 COMPLETIONS_DIR=$SHELL_DIR/completions
 mkdir -p $COMPLETIONS_DIR
-
 ```
 
 ## Apple container
 
 ```sh
-if command -v container > /dev/null
-then
-	container --generate-completion-script zsh > $COMPLETIONS_DIR/_container
+if command -v container >/dev/null; then
+    container --generate-completion-script zsh >$COMPLETIONS_DIR/_container
 fi
 ```
 
 ## Rust
 
 ```sh
-if command -v rustup > /dev/null
-then
-	rustup completions zsh cargo > $COMPLETIONS_DIR/_cargo
-	rustup completions zsh > $COMPLETIONS_DIR/_rustup
+if command -v rustup >/dev/null; then
+    rustup completions zsh cargo >$COMPLETIONS_DIR/_cargo
+    rustup completions zsh >$COMPLETIONS_DIR/_rustup
 fi
 ```
 
 ## npm
 
 ```sh
-if command -v npm > /dev/null
-then
-	npm completion > $SHELL_DIR/npm-completion.sh
+if command -v npm >/dev/null; then
+    npm completion >$SHELL_DIR/npm-completion.sh
 fi
 ```
 
@@ -48,9 +44,8 @@ fi
 [Acton](https://ton-blockchain.github.io/acton) is a unified toolchain for TON smart contracts.
 
 ```sh
-if command -v acton > /dev/null
-then
-	acton completions zsh > $COMPLETIONS_DIR/_acton
+if command -v acton >/dev/null; then
+    acton completions zsh >$COMPLETIONS_DIR/_acton
 fi
 ```
 
@@ -59,8 +54,7 @@ fi
 [Beads](https://beads.gascity.com/) is a lightweight issue tracker with first-class dependency support.
 
 ```sh
-if command -v bd > /dev/null
-then
-	bd completion zsh > $COMPLETIONS_DIR/_bd
+if command -v bd >/dev/null; then
+    bd completion zsh >$COMPLETIONS_DIR/_bd
 fi
 ```

@@ -7,7 +7,6 @@ Add shebang to [setup.sh](./setup.sh) and import utils.
 
 DIR=$(dirname $0)
 source $DIR/../_utils/copy_file.sh
-
 ```
 
 Usually I clone GitHub repos in `$HOME/Code/GitHub/` folder where I place this [gitconfig](./gitconfig)
@@ -29,10 +28,9 @@ Add the config if it does not exist.
 GITCONFIG=$HOME/.gitconfig
 GITHUB_CONFIG=$(grep 'Code/GitHub' $GITCONFIG | tr -d '\n' | tr -d '[:space:]')
 if [ "$GITHUB_CONFIG" != '[includeIf"gitdir:~/Code/GitHub/"]path=~/Code/GitHub/.gitconfig' ]; then
-	echo '[includeIf "gitdir:~/Code/GitHub/"]' >> $GITCONFIG
-	echo '  path = ~/Code/GitHub/.gitconfig' >> $GITCONFIG
+    echo '[includeIf "gitdir:~/Code/GitHub/"]' >>$GITCONFIG
+    echo '  path = ~/Code/GitHub/.gitconfig' >>$GITCONFIG
 fi
-
 ```
 
 See also [gh-clone section in Zsh/README.md](../Zsh/README.md#gh-clone) which sets the `GITHUB_DIR` environment variable.

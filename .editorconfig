@@ -1,6 +1,7 @@
-# This .editorconfig assumes that
-# ./EditorConfig/dot-editorconfig is copied to $HOME/.editorconfig
-
 # Do not trim white space, since markdown files can contain annotated sources.
 [*.md]
 trim_trailing_whitespace = false
+
+[*.{sh,zsh}]
+indent_style = space
+indent_size = 4

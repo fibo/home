@@ -9,7 +9,6 @@ Add shebang to [dependencies.sh](./dependencies.sh) and import utils.
 
 DIR=$(dirname $0)
 source $DIR/../_utils/git_repo.sh
-
 ```
 
 Enter the shell folder, create if it does not exist.
@@ -17,7 +16,6 @@ Enter the shell folder, create if it does not exist.
 ```sh
 mkdir -p $HOME/.shell
 cd $HOME/.shell
-
 ```
 
 ## dir
@@ -63,6 +61,5 @@ git_repo github.com/zsh-users zsh-completions
 Finally, go back.
 
 ```sh
-
 cd -
 ```

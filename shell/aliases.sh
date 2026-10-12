@@ -1,17 +1,12 @@
 # Aliases
 ###
-
 alias vi='nvim '
-
 alias ',,'='cd .. && pwd;'
 alias ','='ls -Galrth;'
-
 alias ns='npm start'
 alias nt='npm test'
 alias nr='npm run'
-
 alias br='bun run'
-
 alias ga='git add .'
 alias gd='git diff'
 alias gc='git commit'

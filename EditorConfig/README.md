@@ -51,6 +51,30 @@ See also
 - [YAML](https://yaml.org/) does not allow tabs as indentation.
 - See [TOML Example](https://github.com/toml-lang/toml#example).
 
+## Four spaces
+
+Python [PEP 8 Standard](https://peps.python.org/pep-0008/) recommends four spaces indentation.
+
+```ini
+
+[*.py]
+indent_style = space
+indent_size = 4
+```
+
+Also prefer shell scripts to have 4 spaces indentation for better readability.
+
+```ini
+
+[*.{sh,bash,zsh}]
+indent_style = space
+indent_size = 4
+
+[{.bashrc,.bash_profile,.profile,.zshrc,.zshenv,.zprofile,.zlogin,.zlogout}]
+indent_style = space
+indent_size = 4
+```
+
 ### Make
 
 Every _Makefile_ should use tabs.
