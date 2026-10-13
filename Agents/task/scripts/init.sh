@@ -31,6 +31,6 @@ if [ ! -d "$MAIN_BRANCH" ]; then
 fi
 
 # Create tasks folder.
-mkdir -p .tasks/.DONE
+mkdir -p tasks/archive
 
 echo "$MAIN_BRANCH"
