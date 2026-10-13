@@ -57,7 +57,7 @@ ls -1 $DIR | while read SKILL; do
 Finally link the skill folder to other agents skill folders.
 
 ```sh
-    ln -sf $HOME/$TARGET_DIR $CLAUDE_SKILLS_DIR/$SKILL
+    ln -sfn $HOME/$TARGET_DIR $CLAUDE_SKILLS_DIR/$SKILL
 done
 ```
 

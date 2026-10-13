@@ -1,6 +1,6 @@
 ---
 name: task
-description: How agents should plan, track and achieve tasks, using git worktrees and a .tasks/ folder
+description: How agents should plan, track and achieve tasks, using git worktrees and a tasks/ folder
 ---
 
 A proper "task name" has no spaces, possibly in kebab-case, for example `task-name`.
@@ -9,7 +9,7 @@ Run `scripts/init.sh` (relative to this skill's directory). It:
 
 - confirms current folder is a container for a bare git repo and its related worktrees, fails otherwise
 - resolves the main branch name and creates its related worktree folder if it does not exist yet
-- creates `.tasks/` and `.tasks/.DONE/` folders
+- creates `tasks/` and `tasks/archive/` folders
 - finally, it prints the main branch name to stdout
 
 If the script fails, notify the human and exit this skill.
@@ -19,40 +19,37 @@ Use that printed name as `<main>` below (assume `main` unless the script says ot
 Then if the `<main>/AGENTS.md` file exists, read it for instructions.
 It should contain information about linters and tools used to validate code and run a git pre-commit hook.
 
+Then if the optional `tasks/AGENTS.md` file exists, read it: it contains additional instructions about how to manage tasks.
+
 Use worktrees to achieve tasks.
 Every worktree is created as a visible folder with the same name of its branch.
 
 Parse the invocation argument (if any) into `task-name` and `goal`:
 
 1. No argument: show a summary of the tasks.
-   Read `.tasks/README.md` first, it may define a richer summary mode.
-   Otherwise list the folders in `.tasks/` (not `.DONE/`) with their goal, and `git worktree list`,
+   Use the summary mode defined in `tasks/AGENTS.md`, if any.
+   Otherwise list the folders in `tasks/` (not `archive/`) with their goal, and `git worktree list`,
    flagging a task with no worktree or a worktree with no task.
    Print one compact table, recommend one next step, and wait for the human's answer.
 2. A single word (no spaces), e.g. `/task task-name`: use it as `task-name`.
 3. Multiple words / a phrase: treat the whole argument as the `goal`, and derive a
    short kebab-case `task-name` from it.
 
-Check the `.tasks/` folder:
+Check the `tasks/` folder:
 
-1. read the `.tasks/README.md` file, if it exists, to get additional instructions about how to manage tasks.
-2. check if there is a folder `.tasks/<task-name>/`, if yes:
-  - read the folder `.tasks/<task-name>/`, each file in this folder is an asset for the task. Assets can be resources, docs, images, sounds, almost any file.
-  - read the file `.tasks/<task-name>/README.md`, if exists, to get the task goal and other related information.
-3. If the `.tasks/<task-name>/` folder does not exist, create it:
+1. check if there is a folder `tasks/<task-name>/`, if yes:
+  - read the folder `tasks/<task-name>/`, each file in this folder is an asset for the task. Assets can be resources, docs, images, sounds, almost any file.
+  - read the file `tasks/<task-name>/task.md`, to get the task goal and other related information.
+2. If the `tasks/<task-name>/` folder does not exist, create it:
   - if no "task goal" is derived yet ask the human directly for the goal.
-  - write the task goal in the `.tasks/<task-name>/README.md`, starting with a first level header with the task name, for example
-
-    # task-name
-
-    task goal...
+  - write the task goal in the `tasks/<task-name>/task.md`.
 
 The _tasks folder_ is a sort of local _Getting Things Done_ board, and it is not necessarily associated to a git repository: for example a macro project with multiple git repositories.
-A task folder can contain other files, like images or other assets. A task README.md can link other tasks, even in some other _tasks folder_ in another project, for example a sub-task, a requirement or a blocker.
+A task folder can contain other files, like images or other assets. A task.md can link other tasks, even in some other _tasks folder_ in another project, for example a sub-task, a requirement or a blocker.
 
 Every time the _tasks folder_ contents are modified, check there are no broken links with [rumdl](https://rumdl.dev)
 
-    rumdl check .tasks/
+    rumdl check tasks/
 
 Every task has also an homonym branch and folder with its related git worktree.
 
@@ -88,21 +85,21 @@ For example to integrate locally into `<main>`:
 
 Something like
 
-	cd ../task-name
+	cd ../<task-name>
 	git rebase <main>
 	cd ../<main>
-	git merge --ff-only task-name
+	git merge --ff-only <task-name>
 
 If the task branched from a worktree other than `<main>`, use that branch in place of `<main>`.
 
 Finally archive the task:
 
 - remove the worktree
-- move the `.tasks/<task-name>` folder to `.tasks/.DONE/` folder
+- move the `tasks/<task-name>` folder to `tasks/archive/` folder
 
 For example, if the branch was rebased locally, run in the container folder
 
-	git worktree remove task-name
-	mv .tasks/<task-name> .tasks/.DONE/
+	git worktree remove <task-name>
+	mv tasks/<task-name> tasks/archive/
 
-If the task was referenced by a link, update the link to point to the `.tasks/.DONE/` folder.
+If the task was referenced by a link, update the link to point to the `tasks/archive/` folder.
