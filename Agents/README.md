@@ -34,6 +34,7 @@ mkdir -p $CLAUDE_SUBAGENTS_DIR
 ### Install agent skills
 
 For every agent skill folder, install it in the `AGENT_SKILLS_DIR`.
+Copy every markdown file: besides `SKILL.md`, a skill can split its instructions into other markdown files.
 
 ```sh
 
@@ -44,7 +45,9 @@ ls -1 $DIR | while read SKILL; do
     SOURCE_DIR=$DIR/$SKILL
     TARGET_DIR=.agents/skills/$SKILL
 
-    copy_file $SOURCE_DIR/SKILL.md $TARGET_DIR/SKILL.md
+    ls -1 $SOURCE_DIR | grep '\.md$' | while read FILE; do
+        copy_file $SOURCE_DIR/$FILE $TARGET_DIR/$FILE
+    done
 
     if test -d $SOURCE_DIR/scripts; then
         mkdir -p $HOME/$TARGET_DIR/scripts/

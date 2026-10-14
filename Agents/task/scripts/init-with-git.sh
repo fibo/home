@@ -1,0 +1,26 @@
+#!/bin/sh
+# Ensures a worktree for the repo's main branch exists, creating it if needed.
+# Prints the main branch name on success.
+set -e
+
+# Create main branch worktree, if it does not exist.
+
+MAIN_BRANCH=$(git symbolic-ref --short HEAD)
+
+if [ ! -d "$MAIN_BRANCH" ]; then
+    git worktree add "$MAIN_BRANCH" >&2
+
+    cd "$MAIN_BRANCH"
+
+    # Fix the fetch configuration to see all remote branches.
+    git config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*" >&2
+
+    # Enable reflogs.
+    git config core.logallrefupdates true
+    cd ..
+fi
+
+# Create tasks folder.
+mkdir -p tasks/archive
+
+echo "$MAIN_BRANCH"

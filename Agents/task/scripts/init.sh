@@ -1,36 +1,31 @@
 #!/bin/sh
-# Ensures a worktree for the repo's main branch exists, creating it if needed.
-# Prints the main branch name on success.
+# Prints the instructions file to read, according to current folder type.
 set -e
+
+SKILL_DIR=$(cd "$(dirname "$0")/.." && pwd)
 
 if [ -d .git ]; then
     echo ".git is a folder, this folder is an ordinary git repo" >&2
     exit 1
 fi
 
-if [ ! -f .git ]; then
-    echo ".git is not a file, this folder is not a container of a git bare repo and its related worktrees" >&2
+if [ -f .git ]; then
+    MAIN_BRANCH=$("$SKILL_DIR/scripts/init-with-git.sh")
+    echo "main branch: $MAIN_BRANCH"
+    echo "instructions: $SKILL_DIR/with-git.md"
+    exit 0
+fi
+
+if git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
+    echo "this folder is inside a git repo, not a container of a git bare repo and its related worktrees" >&2
     exit 1
 fi
 
-# Create main branch worktree, if it does not exist.
-
-MAIN_BRANCH=$(git symbolic-ref --short HEAD)
-
-if [ ! -d "$MAIN_BRANCH" ]; then
-    git worktree add "$MAIN_BRANCH" >&2
-
-    cd "$MAIN_BRANCH"
-
-    # Fix the fetch configuration to see all remote branches.
-    git config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*" >&2
-
-    # Enable reflogs.
-    git config core.logallrefupdates true
-    cd ..
+if [ ! -d tasks ]; then
+    echo "this folder is not a git repo and tasks folder does not exist" >&2
+    exit 1
 fi
 
-# Create tasks folder.
 mkdir -p tasks/archive
 
-echo "$MAIN_BRANCH"
+echo "instructions: $SKILL_DIR/without-git.md"
