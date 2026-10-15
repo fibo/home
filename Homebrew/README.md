@@ -142,6 +142,14 @@ Install [Simple Python version management](https://github.com/pyenv/pyenv)
 brew install pyenv
 ```
 
+### rclone
+
+[rclone](https://rclone.org/) syncs files and directories to and from cloud storage providers.
+
+```sh
+brew install rclone
+```
+
 ### ripgrep
 
 The [ripgrep](https://github.com/burntsushi/ripgrep) CLI _recursively searches directories for a regex pattern while respecting your gitignore_.

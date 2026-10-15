@@ -14,6 +14,7 @@ brew install jq
 brew install mole
 brew install neovim
 brew install pyenv
+brew install rclone
 brew install ripgrep
 brew install rumdl
 brew install shfmt
