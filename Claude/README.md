@@ -1,6 +1,6 @@
 # Claude
 
-## CLAUDE.md
+## Global CLAUDE.md
 
 Create a global CLAUDE.md file with the following content.
 
@@ -66,11 +66,22 @@ Notice that:
 
 ```json
 {
-  "enabledPlugins": {
-    "rust-analyzer-lsp@claude-plugins-official": true,
-    "swift-lsp@claude-plugins-official": true
-  },
+```
+
+### Models
+
+Set default effort level.
+
+```json
   "effortLevel": "medium",
+```
+
+### Appearance
+
+No animations. My Terminal App theme is dark, so use dark theme.
+
+```json
+  "prefersReducedMotion": true,
   "theme": "dark",
 ```
 
@@ -83,12 +94,74 @@ Use a custom [status line](./statusline.md).
   },
 ```
 
-### Permissions
+### Attribution
 
-Setup permission to enable auto mode safely.
+Switch off any attribution. It is really annoying Claude writing anywhere it did
+
+```json
+  "attribution": {
+      "commit": "",
+      "pr": ""
+  },
+```
+
+### Plugins
+
+Enable some of the [Claude official plugins](https://github.com/anthropics/claude-plugins-official).
+
+```json
+  "enabledPlugins": {
+```
+
+[rust-analyzer-lsp](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/rust-analyzer-lsp) requires [rust-analyzer](../Homebrew/README.md#rust-analyzer).
+
+```json
+    "rust-analyzer-lsp@claude-plugins-official": true,
+```
+
+[swift-lsp](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/swift-lsp) assuming that Swift is already installed via Xcode from the App Store.
+
+```json
+    "swift-lsp@claude-plugins-official": true,
+```
+
+[typescript-lsp](https://github.com/anthropics/claude-plugins-official/tree/main/plugins/typescript-lsp) requires [TypeScript](../Homebrew/README.md#typescript) and [typescript-language-server](../Homebrew/README.md#typescript-language-server).
+
+```json
+    "typescript-lsp@claude-plugins-official": true
+```
+
+```json
+  },
+```
+
+### Environment
+
+Setting `CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC=1` in Claude Code disables all non-critical network requests, including telemetry, error reporting, etc. Any non-empty value opts out, including 0 and false. Granurarly opt-out instead using the following:
+
+- `CLAUDE_CODE_DISABLE_FEEDBACK_SURVEY`: turns off the "How is Claude doing this session?" prompt.
+- `DISABLE_FEEDBACK_COMMAND`: disables /feedback and Claude-drafted feedback. It also disables /bug and /share, which use the same path. /feedback can attach your session transcript, so this is worth disabling if you work with sensitive code.
+- `DISABLE_ERROR_REPORTING`: opts out of crash and error reports (Sentry).
+- `DISABLE_TELEMETRY`: latency, reliability, and usage patterns, sent to Anthropic and to third-party logging infrastructure.
+
+```json
+  "env": {
+    "CLAUDE_CODE_DISABLE_FEEDBACK_SURVEY": "1",
+    "DISABLE_ERROR_REPORTING": "1",
+    "DISABLE_FEEDBACK_COMMAND": "1",
+    "DISABLE_TELEMETRY": "1"
+  },
+```
+
+### Permissions
 
 ```json
   "permissions": {
+```
+
+Enable auto mode.
+
+```json
     "defaultMode": "auto",
 ```
 

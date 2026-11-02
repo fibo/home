@@ -1,13 +1,25 @@
 {
-  "enabledPlugins": {
-    "rust-analyzer-lsp@claude-plugins-official": true,
-    "swift-lsp@claude-plugins-official": true
-  },
   "effortLevel": "medium",
+  "prefersReducedMotion": true,
   "theme": "dark",
   "statusLine": {
     "type": "command",
     "command": "sh $HOME/.claude/statusline.sh"
+  },
+  "attribution": {
+      "commit": "",
+      "pr": ""
+  },
+  "enabledPlugins": {
+    "rust-analyzer-lsp@claude-plugins-official": true,
+    "swift-lsp@claude-plugins-official": true,
+    "typescript-lsp@claude-plugins-official": true
+  },
+  "env": {
+    "CLAUDE_CODE_DISABLE_FEEDBACK_SURVEY": "1",
+    "DISABLE_ERROR_REPORTING": "1",
+    "DISABLE_FEEDBACK_COMMAND": "1",
+    "DISABLE_TELEMETRY": "1"
   },
   "permissions": {
     "defaultMode": "auto",

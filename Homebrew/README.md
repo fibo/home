@@ -36,11 +36,15 @@ brew install node
 
 #### Global npm packages
 
+##### TypeScript
+
 Install [TypeScript](https://www.typescriptlang.org/) and Node type definitions
 
 ```sh
 npm install typescript @types/node --global
 ```
+
+##### markdown2code
 
 Install [markdown2code](https://www.npmjs.com/package/markdown2code), which is used also in this repository
 
@@ -166,6 +170,14 @@ brew install ripgrep
 brew install rumdl
 ```
 
+### rust-analyzer
+
+[rust-analyzer](https://rust-analyzer.github.io/) is an implementation of LSP for Rust.
+
+```sh
+brew install rust-analyzer
+```
+
 ### shfmt
 
 [shfmt](https://github.com/mvdan/sh) is a shell parser, formatter, and interpreter.
@@ -188,6 +200,18 @@ brew install go-task
 
 ```sh
 brew install tree
+```
+
+### typescript-language-server
+
+[typescript-language-server](https://github.com/typescript-language-server/typescript-language-server) is an
+
+> Unofficial TypeScript & JavaScript Language Server
+
+It is used by many LSP related tools.
+
+```sh
+brew install typescript-language-server
 ```
 
 ### z

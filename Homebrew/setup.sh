@@ -17,7 +17,9 @@ brew install pyenv
 brew install rclone
 brew install ripgrep
 brew install rumdl
+brew install rust-analyzer
 brew install shfmt
 brew install go-task
 brew install tree
+brew install typescript-language-server
 brew install z
