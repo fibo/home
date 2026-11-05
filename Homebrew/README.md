@@ -52,6 +52,14 @@ Install [markdown2code](https://www.npmjs.com/package/markdown2code), which is u
 npm install markdown2code --global
 ```
 
+##### SVGO
+
+Install [SVGO](https://svgo.dev/), a tool to optimize SVG files
+
+```sh
+npm install svgo --global
+```
+
 ## CLI tools
 
 These are few CLI tools I want to be installed on my Mac. Most of them are development tools.

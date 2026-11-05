@@ -4,6 +4,7 @@ brew analytics off
 brew install node
 npm install typescript @types/node --global
 npm install markdown2code --global
+npm install svgo --global
 brew install awscli
 brew install direnv
 brew install fzf
