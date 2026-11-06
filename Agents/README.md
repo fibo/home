@@ -2,8 +2,6 @@
 
 Every sub-folder of this folder is an agent skill: for example [task](./task/).
 
-Every markdown file in this folder, except this README.md itself, is a _SubAgent_.
-
 ## Setup
 
 Import utils.
@@ -26,9 +24,6 @@ mkdir -p $AGENT_SKILLS_DIR
 
 CLAUDE_SKILLS_DIR=$CLAUDE_DIR/skills/
 mkdir -p $CLAUDE_SKILLS_DIR
-
-CLAUDE_SUBAGENTS_DIR=$CLAUDE_DIR/agents/
-mkdir -p $CLAUDE_SUBAGENTS_DIR
 ```
 
 ### Install agent skills
@@ -61,19 +56,5 @@ Finally link the skill folder to other agents skill folders.
 
 ```sh
     ln -sfn $HOME/$TARGET_DIR $CLAUDE_SKILLS_DIR/$SKILL
-done
-```
-
-### Install sub-agents
-
-For every sub-agents markdown file, copy and link it in the _user level agent dirs_.
-
-```sh
-# Install sub-agents
-
-ls -1 $DIR | grep -v README.md | grep .md | while read FILE; do
-    copy_file $DIR/$FILE .agents/$FILE
-
-    ln -sf $AGENTS_DIR/$FILE $CLAUDE_SUBAGENTS_DIR/$FILE
 done
 ```
