@@ -1,6 +1,6 @@
 # Agent skills
 
-Every sub-folder of this folder is an agent skill: for example [task](./task/).
+Every sub-folder of the [skills](./skills/) folder is an agent skill: for example [task](./skills/task/).
 
 ## Setup
 
@@ -35,9 +35,9 @@ Copy every markdown file: besides `SKILL.md`, a skill can split its instructions
 
 # Install skills
 
-ls -1 $DIR | while read SKILL; do
-    test -d $DIR/$SKILL || continue
-    SOURCE_DIR=$DIR/$SKILL
+ls -1 $DIR/skills | while read SKILL; do
+    test -d $DIR/skills/$SKILL || continue
+    SOURCE_DIR=$DIR/skills/$SKILL
     TARGET_DIR=.agents/skills/$SKILL
 
     ls -1 $SOURCE_DIR | grep '\.md$' | while read FILE; do

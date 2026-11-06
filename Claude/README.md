@@ -28,7 +28,7 @@ Reply only with the direct fix or blunt fragments.
 
 ## Git workflow
 
-The preferred workflow uses _git worktrees_ and a _bare git repo_. Use the [task skill](../Agents/task/) to handle tasks.
+The preferred workflow uses _git worktrees_ and a _bare git repo_. Use the [task skill](../Agents/skills/task/) to handle tasks.
 
 ```md
 
@@ -233,7 +233,7 @@ Enable `rumdl` to lint markdown files.
       "Bash(rumdl check *)",
 ```
 
-Enable scripts used by [task skill](../Agents/task/).
+Enable scripts used by [task skill](../Agents/skills/task/).
 
 ```json
       "Bash($HOME/.claude/skills/task/scripts/*.sh)",
