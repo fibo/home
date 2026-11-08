@@ -138,6 +138,12 @@ Load project instructions from `CLAUDE.md` or, if missing, from `AGENTS.md`.
 
 ### Environment
 
+See [environment variables](https://code.claude.com/docs/en/env-vars) docs.
+
+```json
+  "env": {
+```
+
 Setting `CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC=1` in Claude Code disables all non-critical network requests, including telemetry, error reporting, etc. Any non-empty value opts out, including 0 and false. Granurarly opt-out instead using the following:
 
 - `CLAUDE_CODE_DISABLE_FEEDBACK_SURVEY`: turns off the "How is Claude doing this session?" prompt.
@@ -146,11 +152,20 @@ Setting `CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC=1` in Claude Code disables all
 - `DISABLE_TELEMETRY`: latency, reliability, and usage patterns, sent to Anthropic and to third-party logging infrastructure.
 
 ```json
-  "env": {
     "CLAUDE_CODE_DISABLE_FEEDBACK_SURVEY": "1",
     "DISABLE_ERROR_REPORTING": "1",
     "DISABLE_FEEDBACK_COMMAND": "1",
-    "DISABLE_TELEMETRY": "1"
+    "DISABLE_TELEMETRY": "1",
+```
+
+Run tasks sequentially.
+
+- `CLAUDE_CODE_DISABLE_BACKGROUND_TASKS`: no background shell commands, subagents or forked skills.
+- `CLAUDE_CODE_FORK_SUBAGENT`: turn fork mode off, so Claude can wait for subagents.
+
+```json
+    "CLAUDE_CODE_DISABLE_BACKGROUND_TASKS": "1",
+    "CLAUDE_CODE_FORK_SUBAGENT": "0"
   },
 ```
 
