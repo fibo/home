@@ -12,6 +12,7 @@ brew install git
 brew install gh
 brew install imagemagick
 brew install jq
+brew install lefthook
 brew install mole
 brew install neovim
 brew install pyenv

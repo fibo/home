@@ -130,6 +130,14 @@ brew install imagemagick
 brew install jq
 ```
 
+### Lefthook
+
+[Lefthook](https://lefthook.dev/) is a fast Git hooks manager.
+
+```sh
+brew install lefthook
+```
+
 ### Mole
 
 With [Mole](https://github.com/tw93/Mole) you can easily clean your Mac.
