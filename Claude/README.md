@@ -36,13 +36,6 @@ The preferred workflow uses _git worktrees_ and a _bare git repo_. Use the [task
 
 ```
 
-Prefer an AGENT.md file over Claude.md, also the AGENT.md should be included in the git repo, the Claude.md should be not.
-
-```md
-When entering a git repository or worktree, read AGENTS.md file for instructions.
-
-```
-
 Claude should not commit or push on its own; that decision belongs to a human.
 Before committing, it must show the `git status` and the proposed commit
 message, and wait for approval.
@@ -133,6 +126,14 @@ Enable some of the [Claude official plugins](https://github.com/anthropics/claud
 
 ```json
   },
+```
+
+### Project instructions
+
+Load project instructions from `CLAUDE.md` or, if missing, from `AGENTS.md`.
+
+```json
+  "projectInstructionsMode": "claude-md-or-agents-md",
 ```
 
 ### Environment
