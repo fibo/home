@@ -138,6 +138,17 @@ export PATH="$HOME/.local/bin:$PATH"
 #
 ```
 
+#### Android SDK
+
+Add [Android SDK](https://developer.android.com/tools) tools, like `adb` and `emulator`, to the `PATH`. The SDK is installed by Android Studio.
+
+```zsh
+# https://developer.android.com/tools/variables
+export ANDROID_HOME="$HOME/Library/Android/sdk"
+export PATH="$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/emulator"
+
+```
+
 #### dir
 
 Load [dir](https://github.com/fibo/dir) which is a small script to _create a folder and enter into it_.

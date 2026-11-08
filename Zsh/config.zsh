@@ -44,6 +44,10 @@ export PATH="$HOME/.local/bin:$PATH"
 #
 # CLI tools
 #
+# https://developer.android.com/tools/variables
+export ANDROID_HOME="$HOME/Library/Android/sdk"
+export PATH="$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/emulator"
+
 # https://github.com/fibo/dir
 source $HOME/.shell/dir/fun.sh
 
