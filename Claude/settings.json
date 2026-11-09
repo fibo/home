@@ -1,5 +1,6 @@
 {
-  "effortLevel": "medium",
+  "model": "sonnet",
+  "effortLevel": "low",
   "prefersReducedMotion": true,
   "theme": "dark",
   "statusLine": {
@@ -57,7 +58,6 @@
       "Bash(make *)",
       "Bash(task *)",
       "Bash(rumdl check *)",
-      "Bash($HOME/.claude/skills/task/scripts/*.sh)",
       "WebSearch"
     ],
     "deny": [

@@ -63,10 +63,11 @@ Notice that:
 
 ### Models
 
-Set default effort level.
+Set default model and effort level.
 
 ```json
-  "effortLevel": "medium",
+  "model": "sonnet",
+  "effortLevel": "low",
 ```
 
 ### Appearance
@@ -247,12 +248,6 @@ Enable `rumdl` to lint markdown files.
 
 ```json
       "Bash(rumdl check *)",
-```
-
-Enable scripts used by [task skill](../Agents/skills/task/).
-
-```json
-      "Bash($HOME/.claude/skills/task/scripts/*.sh)",
 ```
 
 Finally, allow web search.
