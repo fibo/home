@@ -66,3 +66,9 @@ alias gs='git status'
 alias gs-='git switch -'
 alias grc='git rebase --continue'
 ```
+
+## Claude
+
+```sh
+alias cl='claude'
+```
