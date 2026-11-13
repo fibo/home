@@ -14,7 +14,7 @@ Using mardkown links instead is something that can be understood both by AI mode
 and markdown parsers and linters.
 
 ```md
-Use markdown links instead of `@` syntax.
+Use markdown links instead of `@` syntax, use the markdown-editing skill.
 
 ```
 

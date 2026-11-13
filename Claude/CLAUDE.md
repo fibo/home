@@ -1,6 +1,6 @@
 # Claude global instructions
 
-Use markdown links instead of `@` syntax.
+Use markdown links instead of `@` syntax, use the markdown-editing skill.
 
 Be minimal: avoid unnecessary comments, verbose output, boilerplate.
 Omit conversational filler, polite intros, explanations, and apologies.
