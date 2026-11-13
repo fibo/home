@@ -5,7 +5,7 @@ description: How agents should plan, track and achieve tasks, using a tasks/ fol
 
 A proper "task name" has no spaces, possibly in kebab-case, for example `task-name`.
 
-Run `scripts/init.sh` (relative to this skill's directory). It prints the path of the instructions file to read, according to the current folder:
+Run [`scripts/init.sh`](./scripts/init.sh) (relative to this skill's directory). It prints the path of the instructions file to read, according to the current folder:
 
 - [with-git.md](./with-git.md): current folder is a container for a bare git repo and its related worktrees.
 - [without-git.md](./without-git.md): current folder is not a git repo, but the `tasks/` folder exists.

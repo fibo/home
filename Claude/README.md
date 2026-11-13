@@ -2,7 +2,7 @@
 
 ## Global CLAUDE.md
 
-Create a global CLAUDE.md file with the following content.
+Create a global [`CLAUDE.md`](./CLAUDE.md) file with the following content.
 
 ```md
 # Claude global instructions
@@ -49,7 +49,7 @@ Never add AI attribution or co-author lines to commits or pull requests.
 
 ## Claude settings
 
-Create a `.claude/settings.json` with the content below.
+Create a [`.claude/settings.json`](./settings.json) with the content below.
 
 Notice that:
 

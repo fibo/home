@@ -1,7 +1,7 @@
 # Claude status line
 
 Script for the `statusLine` defined in [Claude settings](./README.md#claude-settings).
-It is copied to `~/.claude/statusline.sh`.
+It is copied from [`statusline.sh`](./statusline.sh) to `~/.claude/statusline.sh`.
 
 Claude passes session info as JSON on stdin, parse it with `jq`.
 

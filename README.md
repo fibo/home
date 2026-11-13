@@ -14,7 +14,7 @@ Then launch the setup to install or update.
 ./setup.sh
 ```
 
-You can also launch a specific setup script, for example `./EditorConfig/setup.sh`.
+You can also launch a specific setup script, for example [`./EditorConfig/setup.sh`](./EditorConfig/setup.sh).
 
 If a target file already exists and differs from the source file you will see a warning and the target file will be copied to `$HOME/.local/share/home` folder.
 

@@ -15,4 +15,4 @@ Resolve the absolute folder to open:
 
 If unsure, ask instead of guessing.
 
-Then run `scripts/open.sh <abs-folder>` (relative to this skill's directory).
+Then run [`scripts/open.sh`](./scripts/open.sh) `<abs-folder>` (relative to this skill's directory).

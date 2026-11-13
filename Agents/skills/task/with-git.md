@@ -1,6 +1,6 @@
 # Task with git
 
-The main branch worktree folder and the `tasks/archive/` folder are already created by `scripts/init.sh`.
+The main branch worktree folder and the `tasks/archive/` folder are already created by [`scripts/init.sh`](./scripts/init.sh).
 Use the main branch name it printed as `<main>` below.
 
 If the `<main>/AGENTS.md` file exists, read it for instructions.
